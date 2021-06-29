@@ -539,7 +539,17 @@
 <p>   e.g.<br>   以一张尺寸为900 × 600的图片为例，图片共有像素数：<br>   900 × 600 = 540,000像素(Pixel)。<br>   如果图片是RGB 色彩模式，占用的内存是：<br>   900 × 600 × 3 = 1,620,000 字节(bytes).<br>   后面”× 3”表示每个像素内RGB 颜色的信息需要3字节，也是24比特(bit)。 <br>   也可以说每个像素中 3 RGB值，每一个RGB值需要一个 8 比特，也是一个字节，总计24个比特。</p>
 </blockquote>
 <h2 id="方案"><a href="#方案" class="headerlink" title="方案"></a>方案</h2><p>本地文件读取后,生成小图片加载到UIImageView上</p>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">// 小图宽高</span><br><span class="line">CGFloat height = self.height;</span><br><span class="line">CGFloat width = img.size.width * height / img.size.height;</span><br><span class="line"></span><br><span class="line">// 生成小图片</span><br><span class="line">CGSize newSize = CGSizeMake(width, height);</span><br><span class="line">UIGraphicsBeginImageContextWithOptions(newSize, NO, 0.0);</span><br><span class="line">[img drawInRect:CGRectMake(0, 0, newSize.width, newSize.height)];</span><br><span class="line">UIImage *smallImg = UIGraphicsGetImageFromCurrentImageContext();</span><br><span class="line">UIGraphicsEndImageContext();</span><br></pre></td></tr></table></figure>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><pre><code class="Objective-C">// 小图宽高
+CGFloat height = self.height;
+CGFloat width = img.size.width * height / img.size.height;
+
+// 生成小图片
+CGSize newSize = CGSizeMake(width, height);
+UIGraphicsBeginImageContextWithOptions(newSize, NO, 0.0);
+[img drawInRect:CGRectMake(0, 0, newSize.width, newSize.height)];
+UIImage *smallImg = UIGraphicsGetImageFromCurrentImageContext();
+UIGraphicsEndImageContext();
+</code></pre>
 <h2 id="Over"><a href="#Over" class="headerlink" title="Over"></a>Over</h2>
         
     
@@ -1035,6 +1045,10 @@ It will not impact the appearance and can give developers a lot of support :)
 <!-- Import prettify js  -->
 
 
+    
+        <script>lsloader.load("hanabi","/js/hanabi-browser-bundle.js?Pki5+pzkluqu53g+ouMWpA==", true)</script>
+    
+
 
 <!-- Window Load -->
 <!-- add class for prettify -->
@@ -1045,6 +1059,10 @@ It will not impact the appearance and can give developers a lot of support :)
     });
 
     
+    
+        
+        
+        HanabiBrowser.start('pre code',true);
     
 </script>
 

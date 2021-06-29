@@ -535,10 +535,14 @@
 <span id="more"></span>
 
 <h3 id="查看编译时间"><a href="#查看编译时间" class="headerlink" title="查看编译时间"></a>查看编译时间</h3><p>Terminal 输入:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">defaults write com.apple.dt.Xcode ShowBuildOperationDuration YES</span><br></pre></td></tr></table></figure>
+<pre><code>defaults write com.apple.dt.Xcode ShowBuildOperationDuration YES
+</code></pre>
 <p>ps:需重启Xcode<br>如下<br><img src="https://i.loli.net/2019/12/09/vrozlcCqZRLtXy9.png" width="100%" height="100%"></p>
 <h3 id="po打印出的对象为空"><a href="#po打印出的对象为空" class="headerlink" title="po打印出的对象为空"></a><code>po</code>打印出的对象为空</h3><h4 id="主target"><a href="#主target" class="headerlink" title="主target"></a>主target</h4><p>有的时候在LLDB试用<code>po</code>命令时可能会出现错误</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">error: warning: couldn’t get cmd pointer (xxx NULL): extracting data from value failed </span><br><span class="line">Couldn’t materialize: couldn’t get the value of variable now: no location, value may have been optimized out </span><br><span class="line">Errored out in Execute, couldn’t PrepareToExecuteJITExpression</span><br></pre></td></tr></table></figure>
+<pre><code>error: warning: couldn’t get cmd pointer (xxx NULL): extracting data from value failed 
+Couldn’t materialize: couldn’t get the value of variable now: no location, value may have been optimized out 
+Errored out in Execute, couldn’t PrepareToExecuteJITExpression
+</code></pre>
 <p>原因是编译选项选择的是快速+优化。<br>相关内容是Xcode中Optimization Level的设置。</p>
 <p>一共有七种选项:</p>
 <ul>
@@ -554,9 +558,19 @@
 <h4 id="pod里的Optimization-Level"><a href="#pod里的Optimization-Level" class="headerlink" title="pod里的Optimization Level"></a>pod里的Optimization Level</h4><p>我们在使用pod的时候，每一个pod其实都是一个target，它有自己的Optimization Level。cocoapods默认给每一个pod的Optimization Level设置的是Fastest, Smallest，也就是说执行所有的优化和减少内存占用空间。</p>
 <p>这样我们在开发的时候会有两个问题：一个是debug的时候无法输出pod源码里面的变量值，因为编译器已经给代码做了优化，它无法再记录你的变量值了。</p>
 <p>把所有pod的的Optimization Level设置为None只需在Podfile里加入以下代码即可（其中的”Dev”为你项目的Scheme）:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">post_install do |installer|</span><br><span class="line">  installer.pods_project.build_configurations.each do |config|</span><br><span class="line">    if config.name.include?(&quot;Dev&quot;)</span><br><span class="line">      config.build_settings[&#x27;GCC_OPTIMIZATION_LEVEL&#x27;] = &#x27;0&#x27;</span><br><span class="line">    end</span><br><span class="line">  end</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
-<h3 id="设置Xcode编译的线程数"><a href="#设置Xcode编译的线程数" class="headerlink" title="设置Xcode编译的线程数"></a>设置Xcode编译的线程数</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">defaults write xcodebuild PBXNumberOfParallelBuildSubtasks 8</span><br><span class="line">defaults write xcodebuild IDEBuildOperationMaxNumberOfConcurrentCompileTasks 8</span><br><span class="line">defaults write com.apple.xcode PBXNumberOfParallelBuildSubtasks 8</span><br><span class="line">defaults write com.apple.xcode IDEBuildOperationMaxNumberOfConcurrentCompileTasks 8</span><br></pre></td></tr></table></figure>
-
+<pre><code>post_install do |installer|
+  installer.pods_project.build_configurations.each do |config|
+    if config.name.include?(&quot;Dev&quot;)
+      config.build_settings[&#39;GCC_OPTIMIZATION_LEVEL&#39;] = &#39;0&#39;
+    end
+  end
+end
+</code></pre>
+<h3 id="设置Xcode编译的线程数"><a href="#设置Xcode编译的线程数" class="headerlink" title="设置Xcode编译的线程数"></a>设置Xcode编译的线程数</h3><pre><code>defaults write xcodebuild PBXNumberOfParallelBuildSubtasks 8
+defaults write xcodebuild IDEBuildOperationMaxNumberOfConcurrentCompileTasks 8
+defaults write com.apple.xcode PBXNumberOfParallelBuildSubtasks 8
+defaults write com.apple.xcode IDEBuildOperationMaxNumberOfConcurrentCompileTasks 8
+</code></pre>
 <p>Xcode默认使用与CPU核数相同的线程来进行编译，但由于编译过程中的IO操作往往比CPU运算要多，因此适当的提升线程数可以在一定程度上加快编译速度。</p>
 
         
@@ -1053,6 +1067,10 @@ It will not impact the appearance and can give developers a lot of support :)
 <!-- Import prettify js  -->
 
 
+    
+        <script>lsloader.load("hanabi","/js/hanabi-browser-bundle.js?Pki5+pzkluqu53g+ouMWpA==", true)</script>
+    
+
 
 <!-- Window Load -->
 <!-- add class for prettify -->
@@ -1063,6 +1081,10 @@ It will not impact the appearance and can give developers a lot of support :)
     });
 
     
+    
+        
+        
+        HanabiBrowser.start('pre code',true);
     
 </script>
 

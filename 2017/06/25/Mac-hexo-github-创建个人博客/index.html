@@ -537,23 +537,35 @@
 <h3 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h3><p>1.Ruby<br>2.Node<br>3.Hexo<br>4.GitHub帐号</p>
 <h3 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h3><p>1.<br>Mac系统自带Ruby,so忽略</p>
 <p>2.<br>Node<br>用homebrew安装</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install node</span><br></pre></td></tr></table></figure>
-
+<pre><code>brew install node
+</code></pre>
 <p>3.<br>Hexo<br>可以使用nodejs自带的 npm 进行安装.</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo</span><br></pre></td></tr></table></figure>
-
+<pre><code>npm install -g hexo
+</code></pre>
 <p>4.<br>GitHub<br>4.1<br>申请GitHub帐号<br>4.2<br>在自己的GitHub主页右上角,创建一个新的repository.我的GitHub账号是<code>rensss</code>,<br>那么我创建的repository名字就应该为<code>rensss.github.io</code></p>
 <h3 id="搭建"><a href="#搭建" class="headerlink" title="搭建"></a>搭建</h3><h4 id="初始化hexo"><a href="#初始化hexo" class="headerlink" title="初始化hexo"></a>初始化hexo</h4><p>1.<br>在Mac上找一个地方新建一个文件夹存放你的站点.例如我在<code>/Users/&lt;UserName&gt;/Documents</code>下新建的文件夹hexo.具体路径是 <code>/Users/&lt;UserName&gt;/Documents/hexo</code><br>2.<br>初始化hexo</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd /Users/&lt;UserName&gt;/Documents/hexo</span><br><span class="line">hexo init       #初始化</span><br><span class="line">npm install     #npm初始化 </span><br></pre></td></tr></table></figure>
+<pre><code>cd /Users/&lt;UserName&gt;/Documents/hexo
+hexo init       #初始化
+npm install     #npm初始化 
+</code></pre>
 <p>3.<br>本地预览</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean      #清理缓存</span><br><span class="line">hexo generate   #编译</span><br><span class="line">hexo server     #开启服务</span><br></pre></td></tr></table></figure>
+<pre><code>hexo clean      #清理缓存
+hexo generate   #编译
+hexo server     #开启服务
+</code></pre>
 <p>之后,本地访问<code>0.0.0.0:4000</code>就可以看到hexo的欢迎界面了✌️</p>
 <h4 id="上传git"><a href="#上传git" class="headerlink" title="上传git"></a>上传git</h4><p>1.<br>改写<code>_config.yml</code>文件末尾的<code>deploy:</code>标签</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">type: git</span><br><span class="line">  repository: https://github.com/rensss/rensss.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+<pre><code>type: git
+  repository: https://github.com/rensss/rensss.github.io.git
+  branch: master
+</code></pre>
 <p>2.<br>安装<code>hexo-deployer-git</code> git上传用</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+<pre><code>npm install hexo-deployer-git --save
+</code></pre>
 <p>3.<br>先编译再上传</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+<pre><code>hexo g
+hexo deploy
+</code></pre>
 <p>如果无报错,之后等一段时间,就可以访问你的博客了!<br>ps:这段时间可能非常长!!!</p>
 <h3 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h3><p>中间踩坑不断,欲哭无泪,各种谷歌/百度.<br>At the end. 我终于搞出来了!</p>
 <blockquote>
@@ -561,7 +573,9 @@
 <ol>
 <li>hexo 安装失败<br>npm WARN checkPermissions Missing write access to /usr/local/lib/node_modules<br>npm ERR! code EACCES<br>npm ERR! syscall access<br>npm ERR! path /usr/local/lib/node_modules<br>npm ERR! errno -13<br><img src="https://i.loli.net/2020/12/30/sSreygUFGJDtxdQ.png" alt="npm install -g hexo.png"><br>解决方案： 修改权限</li>
 </ol>
-   <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo chown -R $USER /usr/local/lib/node_modules</span><br></pre></td></tr></table></figure></blockquote>
+<pre><code>sudo chown -R $USER /usr/local/lib/node_modules
+</code></pre>
+</blockquote>
 
         
     
@@ -1057,6 +1071,10 @@ It will not impact the appearance and can give developers a lot of support :)
 <!-- Import prettify js  -->
 
 
+    
+        <script>lsloader.load("hanabi","/js/hanabi-browser-bundle.js?Pki5+pzkluqu53g+ouMWpA==", true)</script>
+    
+
 
 <!-- Window Load -->
 <!-- add class for prettify -->
@@ -1067,6 +1085,10 @@ It will not impact the appearance and can give developers a lot of support :)
     });
 
     
+    
+        
+        
+        HanabiBrowser.start('pre code',true);
     
 </script>
 

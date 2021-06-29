@@ -534,17 +534,148 @@
         <p>iOS 中的几种排序方法.</p>
 <span id="more"></span>
 
-<h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">    NSArray *data = [NSArray arrayWithObjects:</span><br><span class="line">                     @&quot;12&quot;,@&quot;4&quot;,@&quot;3&quot;,@&quot;10&quot;,@&quot;25&quot;,</span><br><span class="line">                     @&quot;17&quot;,@&quot;22&quot;,@&quot;44&quot;,@&quot;1&quot;,@&quot;18&quot;,</span><br><span class="line">                     @&quot;35&quot;,@&quot;11&quot;,@&quot;21&quot;,@&quot;16&quot;,@&quot;34&quot;,</span><br><span class="line">                     @&quot;63&quot;,@&quot;102&quot;,@&quot;65&quot;,@&quot;37&quot;,@&quot;97&quot;, nil];</span><br><span class="line"></span><br><span class="line">    NSArray *resaultArr;</span><br><span class="line">    // 计算代码运行时间</span><br><span class="line">    CFAbsoluteTime startTime = CFAbsoluteTimeGetCurrent();</span><br><span class="line">    resaultArr = [self bubbleSort:data];</span><br><span class="line">    CFAbsoluteTime linkTime = (CFAbsoluteTimeGetCurrent() - startTime);</span><br><span class="line">    NSLog(@&quot;冒泡排序 Linked in %f ms&quot;, linkTime * 1000.0);</span><br><span class="line">//    NSLog(@&quot;%@&quot;,resaultArr);</span><br><span class="line">    </span><br><span class="line">    startTime = CFAbsoluteTimeGetCurrent();</span><br><span class="line">    resaultArr = [self selectSort:data];</span><br><span class="line">    linkTime = (CFAbsoluteTimeGetCurrent() - startTime);</span><br><span class="line">    NSLog(@&quot;选择排序 Linked in %f ms&quot;, linkTime * 1000.0);</span><br><span class="line">//    NSLog(@&quot;%@&quot;,resaultArr);</span><br><span class="line">    </span><br><span class="line">    startTime = CFAbsoluteTimeGetCurrent();</span><br><span class="line">    resaultArr = [self hillSort:data];</span><br><span class="line">    linkTime = (CFAbsoluteTimeGetCurrent() - startTime);</span><br><span class="line">    NSLog(@&quot;希尔排序 Linked in %f ms&quot;, linkTime * 1000.0);</span><br><span class="line">//    NSLog(@&quot;%@&quot;,resaultArr);</span><br><span class="line">    </span><br><span class="line">    startTime = CFAbsoluteTimeGetCurrent();</span><br><span class="line">    resaultArr = [self quicksort:data];</span><br><span class="line">    linkTime = (CFAbsoluteTimeGetCurrent() - startTime);</span><br><span class="line">    NSLog(@&quot;快速排序 Linked in %f ms&quot;, linkTime * 1000.0);</span><br><span class="line">//    NSLog(@&quot;%@&quot;,resaultArr);</span><br></pre></td></tr></table></figure>
-<h3 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> 冒泡排序</span><br><span class="line"></span><br><span class="line"> @param dataSourceArr 数据源</span><br><span class="line"> @return 有序数据</span><br><span class="line"> */</span><br><span class="line">- (NSArray *)bubbleSort:(NSArray *)dataSourceArr &#123;</span><br><span class="line">        </span><br><span class="line">    NSMutableArray *currentArray = dataSourceArr.mutableCopy;</span><br><span class="line">    NSInteger count = dataSourceArr.count;</span><br><span class="line">    //外循环控制  多少轮</span><br><span class="line">    for (NSInteger i = 0; i &lt; count; i++) &#123;</span><br><span class="line">        //内循环比较  j元素 跟 j+1 比较 相邻的元素</span><br><span class="line">        for (NSInteger j = 0; j &lt; count - 1 - i; j++) &#123;</span><br><span class="line">            if ([currentArray[j] integerValue] &gt; [currentArray[j + 1] integerValue]) &#123;</span><br><span class="line">                NSObject *temp = currentArray[j + 1];</span><br><span class="line">                currentArray[j + 1] = currentArray[j];</span><br><span class="line">                currentArray[j] = temp;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    return currentArray.copy;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> 选择排序</span><br><span class="line"></span><br><span class="line"> @param dataSourceArr 数据源</span><br><span class="line"> @return 有序数据</span><br><span class="line"> */</span><br><span class="line">- (NSArray *)selectSort:(NSArray *)dataSourceArr &#123;</span><br><span class="line">    </span><br><span class="line">    NSMutableArray *currentArray = dataSourceArr.mutableCopy;</span><br><span class="line">    NSInteger count = dataSourceArr.count;</span><br><span class="line">    //外层控制轮数 需要比较多少轮</span><br><span class="line">    for (NSInteger i = 0; i &lt; count; i++) &#123;</span><br><span class="line">        //每轮跟其它元素比较 选出最大的 交换</span><br><span class="line">        for (NSInteger j = i + 1; j &lt; count; j++) &#123;</span><br><span class="line">            if ([currentArray[i] integerValue] &gt; [currentArray[j] integerValue]) &#123;</span><br><span class="line">                NSObject *temp = currentArray[j];</span><br><span class="line">                currentArray[j] = currentArray[i];</span><br><span class="line">                currentArray[i] = temp;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return currentArray.copy;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><pre><code>    NSArray *data = [NSArray arrayWithObjects:
+                     @&quot;12&quot;,@&quot;4&quot;,@&quot;3&quot;,@&quot;10&quot;,@&quot;25&quot;,
+                     @&quot;17&quot;,@&quot;22&quot;,@&quot;44&quot;,@&quot;1&quot;,@&quot;18&quot;,
+                     @&quot;35&quot;,@&quot;11&quot;,@&quot;21&quot;,@&quot;16&quot;,@&quot;34&quot;,
+                     @&quot;63&quot;,@&quot;102&quot;,@&quot;65&quot;,@&quot;37&quot;,@&quot;97&quot;, nil];
 
+    NSArray *resaultArr;
+    // 计算代码运行时间
+    CFAbsoluteTime startTime = CFAbsoluteTimeGetCurrent();
+    resaultArr = [self bubbleSort:data];
+    CFAbsoluteTime linkTime = (CFAbsoluteTimeGetCurrent() - startTime);
+    NSLog(@&quot;冒泡排序 Linked in %f ms&quot;, linkTime * 1000.0);
+//    NSLog(@&quot;%@&quot;,resaultArr);
+    
+    startTime = CFAbsoluteTimeGetCurrent();
+    resaultArr = [self selectSort:data];
+    linkTime = (CFAbsoluteTimeGetCurrent() - startTime);
+    NSLog(@&quot;选择排序 Linked in %f ms&quot;, linkTime * 1000.0);
+//    NSLog(@&quot;%@&quot;,resaultArr);
+    
+    startTime = CFAbsoluteTimeGetCurrent();
+    resaultArr = [self hillSort:data];
+    linkTime = (CFAbsoluteTimeGetCurrent() - startTime);
+    NSLog(@&quot;希尔排序 Linked in %f ms&quot;, linkTime * 1000.0);
+//    NSLog(@&quot;%@&quot;,resaultArr);
+    
+    startTime = CFAbsoluteTimeGetCurrent();
+    resaultArr = [self quicksort:data];
+    linkTime = (CFAbsoluteTimeGetCurrent() - startTime);
+    NSLog(@&quot;快速排序 Linked in %f ms&quot;, linkTime * 1000.0);
+//    NSLog(@&quot;%@&quot;,resaultArr);
+</code></pre>
+<h3 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h3><pre><code>/**
+ 冒泡排序
+
+ @param dataSourceArr 数据源
+ @return 有序数据
+ */
+- (NSArray *)bubbleSort:(NSArray *)dataSourceArr &#123;
+        
+    NSMutableArray *currentArray = dataSourceArr.mutableCopy;
+    NSInteger count = dataSourceArr.count;
+    //外循环控制  多少轮
+    for (NSInteger i = 0; i &lt; count; i++) &#123;
+        //内循环比较  j元素 跟 j+1 比较 相邻的元素
+        for (NSInteger j = 0; j &lt; count - 1 - i; j++) &#123;
+            if ([currentArray[j] integerValue] &gt; [currentArray[j + 1] integerValue]) &#123;
+                NSObject *temp = currentArray[j + 1];
+                currentArray[j + 1] = currentArray[j];
+                currentArray[j] = temp;
+            &#125;
+        &#125;
+    &#125;
+    
+    return currentArray.copy;
+&#125;
+</code></pre>
+<h3 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h3><pre><code>/**
+ 选择排序
+
+ @param dataSourceArr 数据源
+ @return 有序数据
+ */
+- (NSArray *)selectSort:(NSArray *)dataSourceArr &#123;
+    
+    NSMutableArray *currentArray = dataSourceArr.mutableCopy;
+    NSInteger count = dataSourceArr.count;
+    //外层控制轮数 需要比较多少轮
+    for (NSInteger i = 0; i &lt; count; i++) &#123;
+        //每轮跟其它元素比较 选出最大的 交换
+        for (NSInteger j = i + 1; j &lt; count; j++) &#123;
+            if ([currentArray[i] integerValue] &gt; [currentArray[j] integerValue]) &#123;
+                NSObject *temp = currentArray[j];
+                currentArray[j] = currentArray[i];
+                currentArray[i] = temp;
+            &#125;
+        &#125;
+    &#125;
+    return currentArray.copy;
+&#125;
+</code></pre>
 <h3 id="希尔排序"><a href="#希尔排序" class="headerlink" title="希尔排序"></a>希尔排序</h3><p>示意图</p>
 <p><img src="https://raw.githubusercontent.com/rensss/Sort/master/source/hillSort.gif" alt="Sorting_shellsort_anim.gif"></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> 希尔排序</span><br><span class="line"></span><br><span class="line"> @param dataSourceArr 数据源</span><br><span class="line"> @return 有序数组</span><br><span class="line"> */</span><br><span class="line">- (NSArray *)hillSort:(NSArray *)dataSourceArr &#123;</span><br><span class="line">    </span><br><span class="line">    /*</span><br><span class="line">     步长的选择是希尔排序的重要部分。只要最终步长为1任何步长序列都可以工作。算法最开始以一定的步长进行排序。然后会继续以一定步长进行排序，最终算法以步长为1进行排序。当步长为1时，算法变为插入排序，这就保证了数据一定会被排序。</span><br><span class="line">     </span><br><span class="line">     已知的最好步长序列是由Sedgewick提出的(1, 5, 19, 41, 109,...)，该序列的项来自 &#123;\displaystyle 9\times 4^&#123;i&#125;-9\times 2^&#123;i&#125;+1&#125; 9\times 4^&#123;i&#125;-9\times 2^&#123;i&#125;+1和 &#123;\displaystyle 2^&#123;i+2&#125;\times (2^&#123;i+2&#125;-3)+1&#125; 2^&#123;&#123;i+2&#125;&#125;\times (2^&#123;&#123;i+2&#125;&#125;-3)+1这两个算式。这项研究也表明“比较在希尔排序中是最主要的操作，而不是交换。”用这样步长序列的希尔排序比插入排序要快，甚至在小数组中比快速排序和堆排序还快，但是在涉及大量数据时希尔排序还是比快速排序慢。</span><br><span class="line">     另一个在大数组中表现优异的步长序列是（斐波那契数列除去0和1将剩余的数以黄金分区比的两倍的幂进行运算得到的数列）：(1, 9, 34, 182, 836, 4025, 19001, 90358, 428481, 2034035, 9651787, 45806244, 217378076, 1031612713,…)</span><br><span class="line">     */</span><br><span class="line">    </span><br><span class="line">    NSMutableArray *currentArray = dataSourceArr.mutableCopy;</span><br><span class="line">    NSInteger gap = currentArray.count / 2;</span><br><span class="line">    NSInteger i,j;</span><br><span class="line">    </span><br><span class="line">    while (gap &gt;= 1) &#123;</span><br><span class="line">        </span><br><span class="line">        for (i = gap; i &lt; currentArray.count; i ++) &#123;</span><br><span class="line">            NSString *temp = currentArray[i];</span><br><span class="line">            </span><br><span class="line">            for (j = i - gap; j &gt;= 0 &amp;&amp; [currentArray[j] integerValue] &gt; [temp integerValue]; j -= gap)</span><br><span class="line">                currentArray[j + gap] = currentArray[j];</span><br><span class="line">            </span><br><span class="line">            currentArray[j + gap] = temp;</span><br><span class="line">        &#125;</span><br><span class="line">        gap = gap / 2;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    return currentArray.copy;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre><code>/**
+ 希尔排序
 
+ @param dataSourceArr 数据源
+ @return 有序数组
+ */
+- (NSArray *)hillSort:(NSArray *)dataSourceArr &#123;
+    
+    /*
+     步长的选择是希尔排序的重要部分。只要最终步长为1任何步长序列都可以工作。算法最开始以一定的步长进行排序。然后会继续以一定步长进行排序，最终算法以步长为1进行排序。当步长为1时，算法变为插入排序，这就保证了数据一定会被排序。
+     
+     已知的最好步长序列是由Sedgewick提出的(1, 5, 19, 41, 109,...)，该序列的项来自 &#123;\displaystyle 9\times 4^&#123;i&#125;-9\times 2^&#123;i&#125;+1&#125; 9\times 4^&#123;i&#125;-9\times 2^&#123;i&#125;+1和 &#123;\displaystyle 2^&#123;i+2&#125;\times (2^&#123;i+2&#125;-3)+1&#125; 2^&#123;&#123;i+2&#125;&#125;\times (2^&#123;&#123;i+2&#125;&#125;-3)+1这两个算式。这项研究也表明“比较在希尔排序中是最主要的操作，而不是交换。”用这样步长序列的希尔排序比插入排序要快，甚至在小数组中比快速排序和堆排序还快，但是在涉及大量数据时希尔排序还是比快速排序慢。
+     另一个在大数组中表现优异的步长序列是（斐波那契数列除去0和1将剩余的数以黄金分区比的两倍的幂进行运算得到的数列）：(1, 9, 34, 182, 836, 4025, 19001, 90358, 428481, 2034035, 9651787, 45806244, 217378076, 1031612713,…)
+     */
+    
+    NSMutableArray *currentArray = dataSourceArr.mutableCopy;
+    NSInteger gap = currentArray.count / 2;
+    NSInteger i,j;
+    
+    while (gap &gt;= 1) &#123;
+        
+        for (i = gap; i &lt; currentArray.count; i ++) &#123;
+            NSString *temp = currentArray[i];
+            
+            for (j = i - gap; j &gt;= 0 &amp;&amp; [currentArray[j] integerValue] &gt; [temp integerValue]; j -= gap)
+                currentArray[j + gap] = currentArray[j];
+            
+            currentArray[j + gap] = temp;
+        &#125;
+        gap = gap / 2;
+    &#125;
+    
+    return currentArray.copy;
+&#125;
+</code></pre>
 <h3 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h3><p>示意图<br><img src="https://raw.githubusercontent.com/rensss/Sort/master/source/quickSort.gif" alt="quickSort"></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> 快速排序</span><br><span class="line"> </span><br><span class="line"> @param dataSourceArr 数据源</span><br><span class="line"> @return 有序数据</span><br><span class="line"> */</span><br><span class="line">- (NSArray *)quicksort:(NSArray *)dataSourceArr &#123;</span><br><span class="line">	</span><br><span class="line">	NSMutableArray *currentArray = dataSourceArr.mutableCopy;</span><br><span class="line">    NSInteger i,j,key;</span><br><span class="line">    for (i = 1; i &lt; [currentArray count]; i++) &#123;</span><br><span class="line">            key = [currentArray[i] integerValue];</span><br><span class="line">            j = i-1;</span><br><span class="line">            while ((j &gt;= 0) &amp;&amp; ([currentArray[j] integerValue] &gt; key)) &#123;</span><br><span class="line">                    currentArray[j+1] = currentArray[j];</span><br><span class="line">                    j--;</span><br><span class="line">            &#125;</span><br><span class="line">            currentArray[j+1] = @(key);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    return currentArray.copy;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+<pre><code>/**
+ 快速排序
+ 
+ @param dataSourceArr 数据源
+ @return 有序数据
+ */
+- (NSArray *)quicksort:(NSArray *)dataSourceArr &#123;
+    
+    NSMutableArray *currentArray = dataSourceArr.mutableCopy;
+    NSInteger i,j,key;
+    for (i = 1; i &lt; [currentArray count]; i++) &#123;
+            key = [currentArray[i] integerValue];
+            j = i-1;
+            while ((j &gt;= 0) &amp;&amp; ([currentArray[j] integerValue] &gt; key)) &#123;
+                    currentArray[j+1] = currentArray[j];
+                    j--;
+            &#125;
+            currentArray[j+1] = @(key);
+    &#125;
+    
+    return currentArray.copy;
+&#125;
+</code></pre>
 <h3 id="函数用时"><a href="#函数用时" class="headerlink" title="函数用时"></a>函数用时</h3><p><img src="https://raw.githubusercontent.com/rensss/Sort/master/source/result.png" alt="排序结果.png"></p>
 <h3 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h3><p>希尔排序比冒泡排序和选择排序要快很多! 快排果然快！🤣</p>
 <hr>
@@ -1046,6 +1177,10 @@ It will not impact the appearance and can give developers a lot of support :)
 <!-- Import prettify js  -->
 
 
+    
+        <script>lsloader.load("hanabi","/js/hanabi-browser-bundle.js?Pki5+pzkluqu53g+ouMWpA==", true)</script>
+    
+
 
 <!-- Window Load -->
 <!-- add class for prettify -->
@@ -1056,6 +1191,10 @@ It will not impact the appearance and can give developers a lot of support :)
     });
 
     
+    
+        
+        
+        HanabiBrowser.start('pre code',true);
     
 </script>
 

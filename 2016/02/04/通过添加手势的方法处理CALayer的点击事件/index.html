@@ -532,8 +532,24 @@
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
         <p>当给UIView添加Animation动画时，项目需要添加点击事件。<span id="more"></span><br>但是使用UIButton无效，不响应点击事件。<br>baidu / google 之。<br>发现UILayer不响应事件。<br>换一种思路，发现可以给整个视图添加点击手势，然后判断点击位置来触发事件。</p>
-<h5 id="代码片段"><a href="#代码片段" class="headerlink" title="代码片段"></a>代码片段</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">  //创建手势添加到视图上</span><br><span class="line">  self.tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(click:)];</span><br><span class="line">  [self.view addGestureRecognizer:self.tapGesture];</span><br><span class="line">  </span><br><span class="line">#pragma mark - 点击</span><br><span class="line">  </span><br><span class="line">  /** 点击事件*/</span><br><span class="line">  -(void)click:(UITapGestureRecognizer *)tapGesture &#123;</span><br><span class="line">  </span><br><span class="line">      CGPoint touchPoint = [tapGesture locationInView:self];</span><br><span class="line">      //遍历当前视图上的子视图的presentationLayer 与点击的点是否有交集</span><br><span class="line">      for (UIView *subView in self.view.subviews) &#123;</span><br><span class="line">          if ([subView.layer.presentationLayer hitTest:touchPoint]) &#123;</span><br><span class="line">              NSLog(@&quot;点击的是：%@&quot;,subView);</span><br><span class="line">          &#125;</span><br><span class="line">      &#125;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
-
+<h5 id="代码片段"><a href="#代码片段" class="headerlink" title="代码片段"></a>代码片段</h5><pre><code>    //创建手势添加到视图上
+    self.tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(click:)];
+    [self.view addGestureRecognizer:self.tapGesture];
+    
+  #pragma mark - 点击
+    
+    /** 点击事件*/
+    -(void)click:(UITapGestureRecognizer *)tapGesture &#123;
+    
+        CGPoint touchPoint = [tapGesture locationInView:self];
+        //遍历当前视图上的子视图的presentationLayer 与点击的点是否有交集
+        for (UIView *subView in self.view.subviews) &#123;
+            if ([subView.layer.presentationLayer hitTest:touchPoint]) &#123;
+                NSLog(@&quot;点击的是：%@&quot;,subView);
+            &#125;
+        &#125;
+    &#125;
+</code></pre>
 <h5 id="打完收工"><a href="#打完收工" class="headerlink" title="打完收工"></a>打完收工</h5>
         
     
@@ -1021,6 +1037,10 @@ It will not impact the appearance and can give developers a lot of support :)
 <!-- Import prettify js  -->
 
 
+    
+        <script>lsloader.load("hanabi","/js/hanabi-browser-bundle.js?Pki5+pzkluqu53g+ouMWpA==", true)</script>
+    
+
 
 <!-- Window Load -->
 <!-- add class for prettify -->
@@ -1031,6 +1051,10 @@ It will not impact the appearance and can give developers a lot of support :)
     });
 
     
+    
+        
+        
+        HanabiBrowser.start('pre code',true);
     
 </script>
 

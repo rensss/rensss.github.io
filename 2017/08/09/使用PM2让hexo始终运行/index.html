@@ -536,15 +536,42 @@
 <p><em>PM2.JPG</em></p>
 </blockquote>
 <h4 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h4><p>1.安装pm2</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g pm2</span><br></pre></td></tr></table></figure>
-
+<pre><code>npm install -g pm2
+</code></pre>
 <p>2.编辑脚本代码<br>    在hexo博客的根目录下新建<code>app.js</code>文件<br>    编写内容</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">//run.js</span><br><span class="line">const &#123; exec &#125; = require(&#x27;child_process&#x27;)</span><br><span class="line">exec(&#x27;hexo s&#x27;,(error, stdout, stderr) =&gt; &#123;</span><br><span class="line">    if(error)&#123;</span><br><span class="line">         console.log(`exec error: $&#123;error&#125;`)</span><br><span class="line">         return</span><br><span class="line">    &#125;</span><br><span class="line">    console.log(`stdout: $&#123;stdout&#125;`);</span><br><span class="line">    console.log(`stderr: $&#123;stderr&#125;`);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<pre><code>//run.js
+const &#123; exec &#125; = require(&#39;child_process&#39;)
+exec(&#39;hexo s&#39;,(error, stdout, stderr) =&gt; &#123;
+    if(error)&#123;
+         console.log(`exec error: $&#123;error&#125;`)
+         return
+    &#125;
+    console.log(`stdout: $&#123;stdout&#125;`);
+    console.log(`stderr: $&#123;stderr&#125;`);
+&#125;)
+</code></pre>
 <h4 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h4><p>1.运行</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pm2 start app.js</span><br></pre></td></tr></table></figure>
+<pre><code>pm2 start app.js
+</code></pre>
 <p>2.常用命令</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">pm2 start app.js -i 4           # 后台运行pm2，启动4个app.js </span><br><span class="line">                                # 也可以把&#x27;max&#x27; 参数传递给 start</span><br><span class="line">                                # 正确的进程数目依赖于Cpu的核心数目</span><br><span class="line">pm2 start app.js --name my-api  # 命名进程</span><br><span class="line">pm2 list                        # 显示所有进程状态</span><br><span class="line">pm2 monit                       # 监视所有进程</span><br><span class="line">pm2 logs                        # 显示所有进程日志</span><br><span class="line">pm2 stop all                    # 停止所有进程</span><br><span class="line">pm2 restart all                 # 重启所有进程</span><br><span class="line">pm2 reload all                  # 0秒停机重载进程 (用于 NETWORKED 进程)</span><br><span class="line">pm2 stop 0                      # 停止指定的进程</span><br><span class="line">pm2 restart 0                   # 重启指定的进程</span><br><span class="line">pm2 startup                     # 产生 init 脚本 保持进程活着</span><br><span class="line">pm2 web                         # 运行健壮的 computer API endpoint</span><br><span class="line">                                # (http://localhost:9615)</span><br><span class="line">pm2 delete 0                    # 杀死指定的进程</span><br><span class="line">pm2 delete all                  # 杀死全部进程</span><br></pre></td></tr></table></figure>
-
+<pre><code>pm2 start app.js -i 4           # 后台运行pm2，启动4个app.js 
+                                # 也可以把&#39;max&#39; 参数传递给 start
+                                # 正确的进程数目依赖于Cpu的核心数目
+pm2 start app.js --name my-api  # 命名进程
+pm2 list                        # 显示所有进程状态
+pm2 monit                       # 监视所有进程
+pm2 logs                        # 显示所有进程日志
+pm2 stop all                    # 停止所有进程
+pm2 restart all                 # 重启所有进程
+pm2 reload all                  # 0秒停机重载进程 (用于 NETWORKED 进程)
+pm2 stop 0                      # 停止指定的进程
+pm2 restart 0                   # 重启指定的进程
+pm2 startup                     # 产生 init 脚本 保持进程活着
+pm2 web                         # 运行健壮的 computer API endpoint
+                                # (http://localhost:9615)
+pm2 delete 0                    # 杀死指定的进程
+pm2 delete all                  # 杀死全部进程
+</code></pre>
 <p><img src="https://i.loli.net/2021/06/29/1XWVGptqxOaB9cM.png" alt="pm2 list-2017-08-09-下午12.06.06.png"></p>
 <blockquote>
 <p><em>pm2 list</em></p>
@@ -1044,6 +1071,10 @@ It will not impact the appearance and can give developers a lot of support :)
 <!-- Import prettify js  -->
 
 
+    
+        <script>lsloader.load("hanabi","/js/hanabi-browser-bundle.js?Pki5+pzkluqu53g+ouMWpA==", true)</script>
+    
+
 
 <!-- Window Load -->
 <!-- add class for prettify -->
@@ -1054,6 +1085,10 @@ It will not impact the appearance and can give developers a lot of support :)
     });
 
     
+    
+        
+        
+        HanabiBrowser.start('pre code',true);
     
 </script>
 

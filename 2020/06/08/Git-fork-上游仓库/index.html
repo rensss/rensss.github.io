@@ -535,17 +535,70 @@
 <span id="more"></span>
 
 <h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><p>在GitHub(<del>大型同性交友网站</del>)上我们可以找到大量有趣、有用的Repository,有的时候我们会使用fork工能,但是有时候你想让fork下的仓库跟上游仓库保持更新，那么就需要一些操作。</p>
-<h4 id="详细步骤"><a href="#详细步骤" class="headerlink" title="详细步骤"></a>详细步骤</h4><h5 id="查看仓库状态"><a href="#查看仓库状态" class="headerlink" title="查看仓库状态"></a>查看仓库状态</h5><p>   首先<code>cd</code>到项目目录<br>   <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote -v # 您的fork的当前配置的远程仓库。</span><br></pre></td></tr></table></figure><br>   如下图所示，即没有设置上游仓库<br>   <img src="https://i.loli.net/2020/06/08/aNLuqkFnpeK3lyR.png" alt="remote -v.png"></p>
-<h5 id="设置上游仓库"><a href="#设置上游仓库" class="headerlink" title="设置上游仓库"></a>设置上游仓库</h5>   <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add upstream # https.gitxxx  指定上游仓库</span><br></pre></td></tr></table></figure>
+<h4 id="详细步骤"><a href="#详细步骤" class="headerlink" title="详细步骤"></a>详细步骤</h4><h5 id="查看仓库状态"><a href="#查看仓库状态" class="headerlink" title="查看仓库状态"></a>查看仓库状态</h5><p>   首先<code>cd</code>到项目目录</p>
+<pre><code>git remote -v # 您的fork的当前配置的远程仓库。
+</code></pre>
+<p>   如下图所示，即没有设置上游仓库<br>   <img src="https://i.loli.net/2020/06/08/aNLuqkFnpeK3lyR.png" alt="remote -v.png"></p>
+<h5 id="设置上游仓库"><a href="#设置上游仓库" class="headerlink" title="设置上游仓库"></a>设置上游仓库</h5><pre><code>git remote add upstream # https.gitxxx  指定上游仓库
+</code></pre>
 <p>   重复1步骤查看仓库状态<br>   结果如下<br>   <img src="https://i.loli.net/2020/06/08/GUqIVoDbAzmrPJN.png" alt="remote add upstream.png"></p>
-<h5 id="抓取上游跟新到本地"><a href="#抓取上游跟新到本地" class="headerlink" title="抓取上游跟新到本地"></a>抓取上游跟新到本地</h5>   <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git fetch upstream # 抓取上游仓库的更新到本地</span><br></pre></td></tr></table></figure>
-<h5 id="切换分支"><a href="#切换分支" class="headerlink" title="切换分支"></a>切换分支</h5><p>   列出分支列表<br>   <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch # 列出当前有多少分支  按q退出编辑模式</span><br></pre></td></tr></table></figure><br>   切换分支<br>   <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout master # 切换到 master 主分支</span><br></pre></td></tr></table></figure></p>
-<h5 id="合并上游更新"><a href="#合并上游更新" class="headerlink" title="合并上游更新"></a>合并上游更新</h5>   <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git merge upstream/master # 合并上游更新</span><br></pre></td></tr></table></figure>
-<h5 id="推送合并后的更新"><a href="#推送合并后的更新" class="headerlink" title="推送合并后的更新"></a>推送合并后的更新</h5>   <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin master # 推送合并后的更新</span><br></pre></td></tr></table></figure>
+<h5 id="抓取上游跟新到本地"><a href="#抓取上游跟新到本地" class="headerlink" title="抓取上游跟新到本地"></a>抓取上游跟新到本地</h5><pre><code>git fetch upstream # 抓取上游仓库的更新到本地
+</code></pre>
+<h5 id="切换分支"><a href="#切换分支" class="headerlink" title="切换分支"></a>切换分支</h5><p>   列出分支列表</p>
+<pre><code>git branch # 列出当前有多少分支  按q退出编辑模式
+</code></pre>
+<p>   切换分支</p>
+<pre><code>git checkout master # 切换到 master 主分支
+</code></pre>
+<h5 id="合并上游更新"><a href="#合并上游更新" class="headerlink" title="合并上游更新"></a>合并上游更新</h5><pre><code>git merge upstream/master # 合并上游更新
+</code></pre>
+<h5 id="推送合并后的更新"><a href="#推送合并后的更新" class="headerlink" title="推送合并后的更新"></a>推送合并后的更新</h5><pre><code>git push origin master # 推送合并后的更新
+</code></pre>
 <h4 id="END"><a href="#END" class="headerlink" title="END"></a>END</h4><hr>
 <blockquote>
 <p>ps </p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"># Git 常用命令集</span><br><span class="line">git clone git://github.com/limbopro/Script.git # 检出仓库</span><br><span class="line">git remote -v # 查看远程仓库 刚刚已经用过了 </span><br><span class="line">git remote add [name] [url] # 添加远程仓库 刚刚已经用过了 </span><br><span class="line">git remote rm [name] # 删除远程仓库</span><br><span class="line">git remote set-url --push [name] [newUrl] # 修改远程仓库</span><br><span class="line">git pull [remoteName] [localBranchName] # 拉取远程仓库 与fetch 有所区别 </span><br><span class="line">git push [remoteName] [localBranchName] # 推送远程仓库</span><br><span class="line"></span><br><span class="line">git branch # 查看本地分支 一般默认为 master </span><br><span class="line">git branch -r # 查看远程分支</span><br><span class="line">git branch [name] # 创建本地分支 注意新分支创建后不会自动切换为当前分支 </span><br><span class="line">git checkout [name] # 切换分支</span><br><span class="line">git checkout -b [name] # 创建新分支并立即切换到新分支</span><br><span class="line">git branch -d [name] # 删除分支 -d选项只能删除已经参与了合并的分支，对于未有合并的分支是无法删除的。如果想强制删除一个分支，可以使用-D选项</span><br><span class="line">git merge [name] # 合并分支 将名称为[name]的分支与当前分支合并</span><br><span class="line"></span><br><span class="line">git status # 查看当前状态 同步上游仓库更新时会常用到</span><br><span class="line">git commit # 提交 合并更新后，提交到远程仓库会用到</span><br><span class="line">git branch -a # 查看所有的分支</span><br><span class="line">git branch -r # 查看远程所有分支</span><br><span class="line"></span><br><span class="line"># 查看、添加、提交、删除、找回，重置修改文件</span><br><span class="line">git help &lt;command&gt; # 显示command的help</span><br><span class="line">git show # 显示某次提交的内容 git show $id</span><br><span class="line">git co -- &lt;file&gt; # 抛弃工作区修改</span><br><span class="line">git co . # 抛弃工作区修改</span><br><span class="line">git add &lt;file&gt; # 将工作文件修改提交到本地暂存区</span><br><span class="line">git add . # 将所有修改过的工作文件提交暂存区</span><br><span class="line">git rm &lt;file&gt; # 从版本库中删除文件</span><br><span class="line">git rm &lt;file&gt; --cached # 从版本库中删除文件，但不删除文件</span><br><span class="line">git reset &lt;file&gt; # 从暂存区恢复到工作文件</span><br><span class="line">git reset -- . # 从暂存区恢复到工作文件</span><br><span class="line">git reset --hard # 恢复最近一次提交过的状态，即放弃上次提交后的所有本次修改</span><br><span class="line">git ci --amend # 修改最后一次提交记录</span><br><span class="line">git revert &lt;$id&gt; # 恢复某次提交的状态，恢复动作本身也创建次提交对象</span><br><span class="line">git revert HEAD # 恢复最后一次提交的状态</span><br><span class="line"># 查看文件diff</span><br><span class="line">git diff &lt;file&gt; # 比较当前文件和暂存区文件差异 git diff</span><br><span class="line">git diff &lt;id1&gt; &lt;id2&gt; # 比较两次提交之间的差异</span><br></pre></td></tr></table></figure></blockquote>
+<pre><code># Git 常用命令集
+git clone git://github.com/limbopro/Script.git # 检出仓库
+git remote -v # 查看远程仓库 刚刚已经用过了 
+git remote add [name] [url] # 添加远程仓库 刚刚已经用过了 
+git remote rm [name] # 删除远程仓库
+git remote set-url --push [name] [newUrl] # 修改远程仓库
+git pull [remoteName] [localBranchName] # 拉取远程仓库 与fetch 有所区别 
+git push [remoteName] [localBranchName] # 推送远程仓库
+
+git branch # 查看本地分支 一般默认为 master 
+git branch -r # 查看远程分支
+git branch [name] # 创建本地分支 注意新分支创建后不会自动切换为当前分支 
+git checkout [name] # 切换分支
+git checkout -b [name] # 创建新分支并立即切换到新分支
+git branch -d [name] # 删除分支 -d选项只能删除已经参与了合并的分支，对于未有合并的分支是无法删除的。如果想强制删除一个分支，可以使用-D选项
+git merge [name] # 合并分支 将名称为[name]的分支与当前分支合并
+
+git status # 查看当前状态 同步上游仓库更新时会常用到
+git commit # 提交 合并更新后，提交到远程仓库会用到
+git branch -a # 查看所有的分支
+git branch -r # 查看远程所有分支
+
+# 查看、添加、提交、删除、找回，重置修改文件
+git help &lt;command&gt; # 显示command的help
+git show # 显示某次提交的内容 git show $id
+git co -- &lt;file&gt; # 抛弃工作区修改
+git co . # 抛弃工作区修改
+git add &lt;file&gt; # 将工作文件修改提交到本地暂存区
+git add . # 将所有修改过的工作文件提交暂存区
+git rm &lt;file&gt; # 从版本库中删除文件
+git rm &lt;file&gt; --cached # 从版本库中删除文件，但不删除文件
+git reset &lt;file&gt; # 从暂存区恢复到工作文件
+git reset -- . # 从暂存区恢复到工作文件
+git reset --hard # 恢复最近一次提交过的状态，即放弃上次提交后的所有本次修改
+git ci --amend # 修改最后一次提交记录
+git revert &lt;$id&gt; # 恢复某次提交的状态，恢复动作本身也创建次提交对象
+git revert HEAD # 恢复最后一次提交的状态
+# 查看文件diff
+git diff &lt;file&gt; # 比较当前文件和暂存区文件差异 git diff
+git diff &lt;id1&gt; &lt;id2&gt; # 比较两次提交之间的差异
+</code></pre>
+</blockquote>
 
         
     
@@ -1041,6 +1094,10 @@ It will not impact the appearance and can give developers a lot of support :)
 <!-- Import prettify js  -->
 
 
+    
+        <script>lsloader.load("hanabi","/js/hanabi-browser-bundle.js?Pki5+pzkluqu53g+ouMWpA==", true)</script>
+    
+
 
 <!-- Window Load -->
 <!-- add class for prettify -->
@@ -1051,6 +1108,10 @@ It will not impact the appearance and can give developers a lot of support :)
     });
 
     
+    
+        
+        
+        HanabiBrowser.start('pre code',true);
     
 </script>
 

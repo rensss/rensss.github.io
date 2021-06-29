@@ -541,20 +541,30 @@
 </ol>
 <h3 id="详细"><a href="#详细" class="headerlink" title="详细"></a>详细</h3><ol>
 <li><h4 id="更新代码"><a href="#更新代码" class="headerlink" title="更新代码"></a>更新代码</h4><ol>
-<li><h5 id="上传代码"><a href="#上传代码" class="headerlink" title="上传代码"></a>上传代码</h5>   <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git add *</span><br><span class="line"></span><br><span class="line">git commit -m &quot;update tag 0.0.2&quot;</span><br><span class="line"></span><br><span class="line">git push origin -u master</span><br></pre></td></tr></table></figure>
+<li><h5 id="上传代码"><a href="#上传代码" class="headerlink" title="上传代码"></a>上传代码</h5><pre><code>git add *
 
+git commit -m &quot;update tag 0.0.2&quot;
+
+git push origin -u master
+</code></pre>
 <p>   <img src="http://upload-images.jianshu.io/upload_images/847229-3cd2e55001af4f40.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="git add.png"></p>
 </li>
-<li><h5 id="打tag"><a href="#打tag" class="headerlink" title="打tag"></a>打tag</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git tag 0.0.2</span><br><span class="line"></span><br><span class="line">git push --tags</span><br></pre></td></tr></table></figure>
+<li><h5 id="打tag"><a href="#打tag" class="headerlink" title="打tag"></a>打tag</h5><pre><code>git tag 0.0.2
 
+git push --tags
+</code></pre>
 <p>​<img src="http://upload-images.jianshu.io/upload_images/847229-d0ca8e36cce4f858.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="git tag.png"></p>
 </li>
 </ol>
 </li>
 <li><h4 id="修改-podspec文件"><a href="#修改-podspec文件" class="headerlink" title="修改.podspec文件"></a>修改.podspec文件</h4><p>修改关键数据<code>s.version</code>和<code>s.source</code></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">s.version = &quot;0.0.2&quot;</span><br><span class="line"></span><br><span class="line">s.source = &#123; :git =&gt; &quot;https://github.com/rensss/R_category.git&quot;, :tag =&gt; &quot;0.0.2&quot; &#125;</span><br></pre></td></tr></table></figure></li>
-<li><h4 id="上传"><a href="#上传" class="headerlink" title="上传"></a>上传</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pod trunk push R_category.podspec --allow-warnings</span><br></pre></td></tr></table></figure>
+<pre><code>s.version = &quot;0.0.2&quot;
 
+s.source = &#123; :git =&gt; &quot;https://github.com/rensss/R_category.git&quot;, :tag =&gt; &quot;0.0.2&quot; &#125;
+</code></pre>
+</li>
+<li><h4 id="上传"><a href="#上传" class="headerlink" title="上传"></a>上传</h4><pre><code>pod trunk push R_category.podspec --allow-warnings
+</code></pre>
 <p><img src="http://upload-images.jianshu.io/upload_images/847229-60e63fb924e1fb17.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="pod trunk push.png"></p>
 </li>
 </ol>
@@ -1057,6 +1067,10 @@ It will not impact the appearance and can give developers a lot of support :)
 <!-- Import prettify js  -->
 
 
+    
+        <script>lsloader.load("hanabi","/js/hanabi-browser-bundle.js?Pki5+pzkluqu53g+ouMWpA==", true)</script>
+    
+
 
 <!-- Window Load -->
 <!-- add class for prettify -->
@@ -1067,6 +1081,10 @@ It will not impact the appearance and can give developers a lot of support :)
     });
 
     
+    
+        
+        
+        HanabiBrowser.start('pre code',true);
     
 </script>
 
