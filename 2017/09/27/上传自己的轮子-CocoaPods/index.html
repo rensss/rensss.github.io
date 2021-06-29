@@ -430,6 +430,18 @@
 
     <!-- Qrcode -->
     
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">devices other</i>
+    <span class="visuallyhidden">devices other</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+    <li class="mdl-menu__item">在其它设备中阅读本文章</li>
+    
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASYAAAEmCAAAAADqr2IGAAAEEElEQVR42u3aQZIaMRAEQP7/afsBa0NVN2wwmpyTA7MjKTmoVa3HH0/wPBBgwoQJEyZMHkyYMGH6eqZH/OR/9WL4H998/slmlNUaMWHChAnTQUyzIWeLfD768zfnM9ysERMmTJgwncr0vyXlk0gKiPY97YizN2PChAkTJkzJJp0fmJPPZwfXfP6YMGHChAnT86NjG7y2i8+3/NnPjAkTJkyY7sZUBKDl4TYPXhOO+grO72fhmDBhwoTpy5ja7fmK//7V+02YMGHChOlrmD69uW4i3eeLzAuL4UoxYcKECdMRTPtl58ubhbyzhmg7OiZMmDBhug9T0p7Mo9j2mJpHxm3R0JYOmDBhwoTpDKZ2mDZUzTfyzaF3c40VEyZMmDDdmSnHysuCWRSbb+qz1iwmTJgwYTqVafa6/QacbMktdB4QR7E1JkyYMGE6jqkNf/PQdvaeHGL/yT/+FxMmTJgwHcG0afhtAtxZk7IdfdWyxYQJEyZMRzDNItH9lt8+7eJb4qJuwoQJEyZMl2J61xWczTY8azpurhZF8TEmTJgwYTqIqdgmA7j9dZx8C0/Q28YnJkyYMGE6iWnWPtxcncl/njcsddGCxYQJEyZM5zElW3sb3eZLyqHbxmc+T0yYMGHCdB5T29ps49TNO2fH8ll5gQkTJkyYTmX6RBMxLyDe9VO18x/WTZgwYcKE6YJM7QH4vcfjDeXs6s+qbsKECRMmTJdlmm3YLeuMIKeZXf3BhAkTJkx3ZmqPl+3RNI96Z4VF/uYXF3cwYcKECdPFmdrJ5WVEjhUdRz9cXmDChAkTpvOY2mXkgz1fcPLMjt/JnCNiTJgwYcJ0EFMbg84uzcwu6LTB7qz4iAoCTJgwYcJ0QaZZ828zfBvdtq3N9loSJkyYMGG6A1M+ZP6dtlG6aay2iNEcMGHChAnTEUzt9Zp3xaz5MtogOJ8VJkyYMGG6A9PsAk3+V7MrNXlBkKPXQTYmTJgwYTqCaRPj5lPZ/9XsYlC7CkyYMGHCdDZT/vk+us2j4bYUeBc6JkyYMGE6gynfSvOBZ1Hvvl26mWeUEGDChAkTpssyzZa3aUzmIW9+RG9LGUyYMGHCdAem/VJnB9HkQJsH0LNR6oQAEyZMmDBdkKl92iXNLvTkB+O6SZlHxpgwYcKE6QimduPMt+H8wDnjnm32+dUfTJgwYcJ0ElPe2sxbnm1AnLQh8/ZqWxBgwoQJE6Y7MG1ahvk2nx9B27JjE+8WWTgmTJgwYboB0+bQO2umtt/JSw1MmDBhwoRpczzOlzeLZTdFw4v3YMKECROm45hygjainRUHbaA8A/1gOxMTJkyYMH0N0yYSnV2g2YTF+Q+ZXwDChAkTJkynMnmigsCDCRMmTJgwYfJgwoTpW56/0oELOj0hkCIAAAAASUVORK5CYII=">
+    
+</ul>
+
+    
 
     <!-- Tags (bookmark) -->
     
@@ -1051,7 +1063,7 @@ It will not impact the appearance and can give developers a lot of support :)
     var copyrightNow = new Date().getFullYear();
     var textContent = document.querySelector('span[year]')
 
-    copyrightSince = 0000;
+    copyrightSince = 2016;
     if (copyrightSince === copyrightNow||copyrightSince === 0000) {
         textContent.textContent = copyrightNow
     } else {

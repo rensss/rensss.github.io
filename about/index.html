@@ -355,6 +355,18 @@
 
     <!-- Qrcode -->
     
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">devices other</i>
+    <span class="visuallyhidden">devices other</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+    <li class="mdl-menu__item">在其它设备中阅读本文章</li>
+    
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAAB7ElEQVR42u3aS3LCMBAFQN//0sk2G8SbkXGQ1F5RRjZqFqr5XT9bXBcGBgYGBgYGxtcwrvh689I/a5LP83vAwMA4jVHd4qsfGLOr98drMDAwzmSMNzdeU9109f0YGBgYPUb1KQwMDIxnGEny2VuDgYGBcVcSOw7yZtY8motjYGAsyMiL8p/7/Gh/AwMDYylGecQhCBnfHJTBUx+fGcHAwFiKMdPCTNLa8VN56ouBgXEyIy+NVRuZ97YcMDAwTmbkm8gPxKisH7cfpkJDDAyMrRnz31bbn3kjAQMD4zRG9dW9hHa+AFdoDGBgYGzNmNlEgmy2KmdamBgYGFswkhJbtXw/f9RGw2QYGBiHMZISW7VMVh1sTUbwMTAwMHrDptWAsvdn3XDgYmBgLM5IhidyRp7E9u5jYGCczKjeGYeDzbHUPAHGwMA4jJGHcb3BiJlwszkzgoGBsSnj3iOy2vi8ITTEwMDYlFG9xmFivqGZPwUDA+M0Rm9UKy+oVVPiQuEPAwPjMEaefCYHa1I4y0c0Xq7EwMA4kpFsLg8Ze+lroQmBgYGBEZThmgdlayysXDXEwMDAiEPD5IBuptAYGBhHMvIkNk9ZZwLK5oGLgYGxKaOaUuY/XA00H+pvYGBgLMVY98LAwMDAwMDA+NfrF65Pl4Rqmuh3AAAAAElFTkSuQmCC">
+    
+</ul>
+
+    
 
     <!-- Tags (bookmark) -->
     
@@ -897,7 +909,7 @@ It will not impact the appearance and can give developers a lot of support :)
     var copyrightNow = new Date().getFullYear();
     var textContent = document.querySelector('span[year]')
 
-    copyrightSince = 0000;
+    copyrightSince = 2016;
     if (copyrightSince === copyrightNow||copyrightSince === 0000) {
         textContent.textContent = copyrightNow
     } else {

@@ -430,6 +430,18 @@
 
     <!-- Qrcode -->
     
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">devices other</i>
+    <span class="visuallyhidden">devices other</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+    <li class="mdl-menu__item">在其它设备中阅读本文章</li>
+    
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASYAAAEmCAAAAADqr2IGAAAEJElEQVR42u3aS3LjMAwFwNz/0jPbqZrEeQ+QE4turVJ2LIGtBYnPxx9XcH0gwIQJEyZMmFyYMGHC9PJMH/GV/Orfbz958Bd3+ybc8un//2q4RkyYMGHCdBDTLNAc4nFAyfL2rPWvMGHChAnTcUzJBp8sI9+kk2+TZbd3Tg4xmDBhwoQJ0ywdbRPmljKJHxMmTJgwYWqZkhDb4nL+lDZ+TJgwYcL0nkyzbfgxRJ6g5kvKI/+1WjgmTJgwYXoxpnx7vu/fPzrfhAkTJkyYXoapvZ43ErpJa/fjPp9EggkTJkyYjmDKl5cXc2fF1mcgtuvChAkTJkznMbXbavt5e4xIysF5y7Nto2LChAkTpndg2ixmM4Lz+FXtjxd5oxQTJkyYMJ3E1DYs23GcOrgyzV5t+W2FABMmTJgw3ZapDXG20eZNx01y297ny7VjwoQJE6aDmJL0clZCbUOfNSPrzT65AyZMmDBhOojpcbiPN/I8sWyPCHmDs/18Nd+ECRMmTJhuxfTsZeRbdT5mum9hRkcTTJgwYcJ0HFObIral3naRmyPLBccITJgwYcJ0EFM+VDoLvW4lxoeGepvPx2cxYcKECdNBTHl6mTRBN83ItjGZx1+3XTFhwoQJ0xFMs5GXHCsfWp0tbPbCoteDCRMmTJgOYtoMhs5ajLMib5ucJ/ePUl9MmDBhwnRzpiIhXPxP3lzc3HlfJsaECRMmTCcxbVLEWftzNgyUJ8xt/HU7ExMmTJgw3YopDyVvGc6Wuin7zuLHhAkTJkzvxrQpwuaHhll5t224/miRFxMmTJgwvTDT/ijQps2PC7LJt5uUOy8KY8KECROmM5iSIJJPZunltS8sf4XRsQMTJkyYMB3B1G7Ms5R1NlSatCo36e5wcAcTJkyYMN2KabaVJklsu+Vv0trZU+pzEyZMmDBhOoKpTTvb40Ky4Lxhee3hBhMmTJgwnce0SWuTwZqrSr15E/SqqDBhwoQJ00lM+ePbrb1tQOajP8nRpH0WJkyYMGE6lSkJJbp1OVKTbN5tQtuWdzFhwoQJ0/swzRLIlinf2tsUvY32m2dhwoQJE6aDmGZHhHwbbsuybWm4PYgMDwSYMGHChOm2TO34af73VU3Hdkw2H/3BhAkTJkxnM23S1zaFzgnyQu0mScaECRMmTO/A1F5tSrlpWOYxzL795vVgwoQJE6YjmDZjOvkdNoeGFndzf0yYMGHCdCpT29pMNvJNkffa3152IMCECRMmTDdnykNsP9kUYXPE9nocLSZMmDBhwpQ/vkg4S+K8MJ2vFxMmTJgwYZqN1NSjM/FAT1sgjpJkTJgwYcJ0HFOyoebl3c3LaLHaF/b0diYmTJgwYXoxpjahbZuI7RGhHdyp09rk9WDChAkTpiOYXNGBwIUJEyZMmDBhcmHChOlVrr8hu30cvg2uEAAAAABJRU5ErkJggg==">
+    
+</ul>
+
+    
 
     <!-- Tags (bookmark) -->
     
@@ -1011,7 +1023,7 @@ It will not impact the appearance and can give developers a lot of support :)
     var copyrightNow = new Date().getFullYear();
     var textContent = document.querySelector('span[year]')
 
-    copyrightSince = 0000;
+    copyrightSince = 2016;
     if (copyrightSince === copyrightNow||copyrightSince === 0000) {
         textContent.textContent = copyrightNow
     } else {

@@ -63,7 +63,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="前言之前浏览过很多人的博客,感觉十分酷炫.">
-    <meta name="keywords" content=",Mac,GitHub,Hexo">
+    <meta name="keywords" content=",Mac,Hexo,GitHub">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -244,7 +244,7 @@
     <meta property="og:title" content="Mac + Hexo + GitHub 创建个人博客 | R_z_k__">
     <meta property="og:image" content="/img/favicon.png">
     <meta property="og:description" content="前言之前浏览过很多人的博客,感觉十分酷炫.">
-    <meta property="og:article:tag" content="Mac"> <meta property="og:article:tag" content="GitHub"> <meta property="og:article:tag" content="Hexo"> 
+    <meta property="og:article:tag" content="Mac"> <meta property="og:article:tag" content="Hexo"> <meta property="og:article:tag" content="GitHub"> 
 
     
         <meta property="article:published_time" content="Sun Jun 25 2017 21:23:44 GMT+0800">
@@ -289,7 +289,7 @@
             "url": "/img/favicon.png"
         }
     },
-    "keywords": ",Mac,GitHub,Hexo",
+    "keywords": ",Mac,Hexo,GitHub",
     "description": "前言之前浏览过很多人的博客,感觉十分酷炫.",
 }
 </script>
@@ -429,6 +429,18 @@
     -->
 
     <!-- Qrcode -->
+    
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">devices other</i>
+    <span class="visuallyhidden">devices other</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+    <li class="mdl-menu__item">在其它设备中阅读本文章</li>
+    
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASYAAAEmCAAAAADqr2IGAAAEGElEQVR42u3aQW7jMAwF0N7/0p3tAIN4/ifdwlGeVkHayNLzgiLFr28jGF8IMGHChAkTJgMTJkyYHs/0FY+////6878zX3/ffvNqzlfftHvEhAkTJkznMf0nNAYbSLCu50k2nM+82SMmTJgwYTqVaXYISCCSw8FsJS1T8StMmDBhwvSRTMkR4TroXgf4PC1v02ZMmDBhwoRpE4ZzjpZgA4oJEyZMmDANC6Bx0TYJ0u01ZN2C8/u1cEyYMGHC9DCmext3nvn5cf1NmDBhwoTpV5g2o7043B8I8lXNjg6YMGHChOk8pvYS8fcDc3KB2paDk9eACRMmTJhOZWoLu3n4L5YYv5J2bcWlLCZMmDBhOo6p3eQ+MW5fT/7X9vhyW38TJkyYMGF6MFO+meS3bWqdz5C3EOUHjmGRFxMmTJgwPZ5pljq215B52J5xJ+usL1YxYcKECdMRTO0l4iYdzZts7mUdHhowYcKECdNBTPtml5amvWhMwvysbeiGCgEmTJgwYXo80yyxnG0mD8/t9WSOFTUDYcKECROmg5hmQLOgvmkPakvPm4EJEyZMmE5iSh6Wl2vbom3y3NkBYrUjTJgwYcJ0BNOMYFbknTXWrK4ky+MIJkyYMGE6jyn/cR5u2+DdNvHkT/+RWjgmTJgwYXpbpmRjybh35n0JOCfGhAkTJkyfxjQruUaLKBPgDfHseIEJEyZMmM5jyhPgTdiuU9BF8TdZ/6pCgAkTJkyY3oRpE7BnC2qfm5Rx8wPBsL8JEyZMmDAdx5Sj5CE8T2U3V5I3XKNiwoQJE6YjmK6DbhE+LzfWbmOT6G5aeTBhwoQJ0ycwJQlt8tt8SznH7JUk4R8TJkyYMJ3KNEs487LsphHn+6aRrwETJkyYMJ3HNLsm3Cec+RPvOnbkhw9MmDBhwnQq04wsTyxnB4489d20EGHChAkTprOZ2gad/KpyttBN2Tc/xGDChAkTps9hyi8CE5r2MJFgzYrRq0MGJkyYMGE6gilfXF6Ezedv09q2rDxbMyZMmDBhOptpw5cztclqXmJu58SECRMmTGcz5WlhW1T9jkfegrOhublCgAkTJkyY3oppFm5z3DZVzq9R28vO4gVgwoQJE6YjmPIpZlvdJKV5m84m3Y0adzBhwoQJ09sytWO2jbYovArkQbp7W5EXEyZMmDA9nmkTmNu0eRbg883PnvVyTkyYMGHCdBDTvYXX9tAwC/k5U/tSMWHChAnTqUyz7bUl3VmTzc/NjwkTJkyYMP1cy84sQS2uJONEvbj1xYQJEyZMRzPN0si8JSh5SZsrzwIUEyZMmDAdx5SkmrNAvklr77rOzIvRmDBhwoTpPKa2cadNKe9tzUkOHHkL0cvZMGHChAnTEUwGJkyYMGHChMnAhAkTprcafwBpwuw8NX8sTgAAAABJRU5ErkJggg==">
+    
+</ul>
+
     
 
     <!-- Tags (bookmark) -->
@@ -1033,7 +1045,7 @@ It will not impact the appearance and can give developers a lot of support :)
     var copyrightNow = new Date().getFullYear();
     var textContent = document.querySelector('span[year]')
 
-    copyrightSince = 0000;
+    copyrightSince = 2016;
     if (copyrightSince === copyrightNow||copyrightSince === 0000) {
         textContent.textContent = copyrightNow
     } else {

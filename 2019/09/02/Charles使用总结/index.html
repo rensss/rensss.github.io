@@ -430,6 +430,18 @@
 
     <!-- Qrcode -->
     
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">devices other</i>
+    <span class="visuallyhidden">devices other</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+    <li class="mdl-menu__item">在其它设备中阅读本文章</li>
+    
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQ4AAAEOCAAAAABd2qZ5AAADl0lEQVR42u3aS27jMBAFQN//0pntAIGU99ikogDFlWFYMllatPrz+bL+Wx8EOHDgwIEDBw4cOHC8mOMTr+9Xtd/c//Lqv65++f1ui2fBgQMHDhwHOH4IRbdHTe5wf1VC0N6zOAsOHDhw4DjGcRWQrn4zCZz51tc4krPgwIEDB473cOQBOIebh1IcOHDgwPF3OZIt5nB54e8eEQcOHDhwvI1jVwEuCaV5gpdA/FqtFAcOHDhwXHDkQwDv//zofAcOHDhw4PjG0a4roHxUbq0s2F5bnAgHDhw4cGzlyANVu937Il3brForCEboOHDgwIHjGMe8jTTZbjt+16aaRUaLAwcOHDgGHM+0mvLwmfDdM7V7xoEDBw4cezlGNyqLdG0BMf/3NmnEgQMHDhynOZJv8jLfroG2yThdEapx4MCBA8dWjrbY1w4rJOGw3claefHy/jhw4MCB4wDHZEAhT//aobp5chgB4cCBAweOAxxtejYJ1e0gQvuoNnThcODAgQPHgCNv3qy1o+qR6LVxt+AqHDhw4MDxWxx5oM2PNwmfybGLJlPShcOBAwcOHJs41po6n3i1xy7G3QYvCjhw4MCB4wTH19JKQu98rCFvUyXFShw4cODA8QxHnhq1wwqTTbehfW3/OHDgwIFjL0eetu1KsdpAmzSTPuXCgQMHDhzPcKwNGbQhMwmBu8YpotPhwIEDB45jHPmN1ppVa6F6LS0sgjoOHDhw4HicI/kmCc/5WEOL294NBw4cOHCc5lgLbHlbaBLU8+JgO2yBAwcOHDie4cg3XYyjlcXBPNzmj6EoDuLAgQMHjq0c7eHzELh2vPyBtYMROHDgwIHjHEfb+GlHHD5bVzIMUSR7OHDgwIFjK0dygEnrqP0mSfAmqd0PKRwOHDhw4NjK0aZqk3GEtYDaDt5FAxA4cODAgeMYR/7HkxZUcozJA8sbTjhw4MCB4xmOtfCWBLw8JO8qKUaJIg4cOHDg2MrRrkkxsR2PWBtiyJtSOHDgwIHjBEcbtPLyXz420ZYac+4k3OLAgQMHjhMca8E1SfbyomGbwuXEP4ReHDhw4MBxjGM+djbf4mScrn1dwIEDBw4c7+RoxxEmxcR8h8VrBA4cOHDgeA1Hm261za02YVv7Xxw4cODAcY4jT8nyst19SrYWwicvBDhw4MCB4xmOvKw2GX2Yh9i2UBiVF3HgwIEDx1YOCwcOHDhw4MCBAwcOHC9b/wDM4WjRAOZkFAAAAABJRU5ErkJggg==">
+    
+</ul>
+
+    
 
     <!-- Tags (bookmark) -->
     
@@ -1017,7 +1029,7 @@ It will not impact the appearance and can give developers a lot of support :)
     var copyrightNow = new Date().getFullYear();
     var textContent = document.querySelector('span[year]')
 
-    copyrightSince = 0000;
+    copyrightSince = 2016;
     if (copyrightSince === copyrightNow||copyrightSince === 0000) {
         textContent.textContent = copyrightNow
     } else {

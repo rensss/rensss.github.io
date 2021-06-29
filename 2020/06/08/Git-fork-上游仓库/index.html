@@ -430,6 +430,18 @@
 
     <!-- Qrcode -->
     
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">devices other</i>
+    <span class="visuallyhidden">devices other</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+    <li class="mdl-menu__item">在其它设备中阅读本文章</li>
+    
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQ4AAAEOCAAAAABd2qZ5AAADhUlEQVR42u3aQW7DMAwEwPz/0+21QGB7SUqGCoxPRes40viwJcXPj+vP9UGAAwcOHDhw4MCBA8fBHJ/4+v7U9xOufnP1qauV3K8weUJhLzhw4MCBYwPHQxRd3JNs6X4DyRoSiMlecODAgQPHPo4k0qqhW8XN15Ov5GH9OHDgwIHjAI77bSe/rxZmeSTjwIEDB47/yFE41CkWYL2Ax4EDBw4cZ3LkAVaFWBvJB/VKceDAgQPHBUc+BHD+z6/Od+DAgQMHji+O6lVtHc6bfXkR2NwRDhw4cOBYypEHVa88W3VnMtaQrx8HDhw4cOzmyJt0q1DKiy4WmfkQBg4cOHDgWMtRfcSkGZc/vxr5yQu+fGE4cODAgWMpRw8iaRRWo3rSpizEavX/Dhw4cODAUeSoHv/kg2jVWO0Vh8kaHp6DAwcOHDg2c8xbdVWgvCTrlYsP34gDBw4cODZw9NptVdBq0FZX2HvBOHDgwIFjB0d+UJS37aohPS/MmqvFgQMHDhzbOFY19XpHRNXITyCWNQdx4MCBA0fMUR1BqG5vfufk5TXnO3DgwIEDx4ZRuR5ZXlAlEVulqe4LBw4cOHDs4OgdCPUCdR7AkyITBw4cOHC8yTFpBfaCMBk7mAzAFSIZBw4cOHBs45hEV++v91eywvxply8VBw4cOHBs5kjac72Bht7zRyGa4OLAgQMHjqUcvbGz3ibv75wXivlecODAgQPHPo5eAZaPPlTHF6pYvRYkDhw4cOB4kyMKp+Ceahjn43rJ6ym8Qhw4cODAsZSjV7zdx2HC1HtyHu3NgQYcOHDgwDHmmLTqJpE5aedVKR+YcODAgQPHUo58oC3hmLT55tD3O4pG5XDgwIEDx1KOPKgmATk5jqo2B0cVLQ4cOHDgWMSRR9Qq0LVNxvxl4MCBAweOdzh6wwq9Y6FeqE+egwMHDhw43uRIiqVe4ZRvKS/AJg1KHDhw4MCxj6N69RYxL/ny11P+dhw4cODAsZSjOqCQlHDVcYT5SFxSUhZKOBw4cODAMeZIwjXfdn6sNT9M6h2G4cCBAweOdzh6o8+Tsem8+dgb3Y5AceDAgQPHARzV0bReIVc4OioeWeHAgQMHjtM48qjbd6zVux8HDhw4cLzJkcTkfOn3xVs+EnHEsRMOHDhw4BgPNPSGEiZBe09TZcKBAwcOHLs5XDhw4MCBAwcOHDhw4Djs+gXn2zTNdbEV6QAAAABJRU5ErkJggg==">
+    
+</ul>
+
+    
 
     <!-- Tags (bookmark) -->
     
@@ -1017,7 +1029,7 @@ It will not impact the appearance and can give developers a lot of support :)
     var copyrightNow = new Date().getFullYear();
     var textContent = document.querySelector('span[year]')
 
-    copyrightSince = 0000;
+    copyrightSince = 2016;
     if (copyrightSince === copyrightNow||copyrightSince === 0000) {
         textContent.textContent = copyrightNow
     } else {

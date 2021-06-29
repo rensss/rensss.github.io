@@ -421,6 +421,18 @@
 
     <!-- Qrcode -->
     
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">devices other</i>
+    <span class="visuallyhidden">devices other</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+    <li class="mdl-menu__item">在其它设备中阅读本文章</li>
+    
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAAC00lEQVR42u3aQXIjOQwEQP3/0zPXPaykKkAOa8jsk8NudTOpA4wCH3+uvB7Y2NjY2NjY2NjYX8l+xNd/73/22WdPTu7/n4U+uaddMzY2NvYN7Pz1z3gJuF16voZky7CxsbFvYCdF6zVvX8Dye9o1Y2NjY2Mn1KREzdoMbGxsbOyfKGCbNmPWqGBjY2Nj70OlWVOxL5C/nKVhY2Njfz17M+j9rZ9/eb6NjY2N/TXs9pqVltkQtz3i82bl2NjY2IeyX7cB++YhX3pSovKtH2Zp2NjY2P8gu41yNpF9spWzchUVUWxsbOxD2XnQ376sLTP7o0Jv/oqNjY19KLv42Gism4dHn/0asLGxse9h58dfXjcVyWf39z/KCxsbG/tOdl488sgpL3WzYGsYKmFjY2MfwZ6FR7MRbI7Mm408eMLGxsY+lT1bdH6YMl90uyn1BmFjY2Mfym7bkuif/g8FVZsjntjY2Nh3sj8wTC2Xm29ue6ATGxsb+zZ2PsrNo/9NeJSPdQsLNjY29qHsDew1db8RedsznG9jY2NjH8RuA6CfaB72Y90324qNjY19KPv1y9ojmG1wn+DzMKsoYNjY2NgHsffx/esXz9qJfBOLwQY2Njb2BewW0wb3m4K3GfFiY2Nj38BOovwkfmrbg9mgoh0zY2NjY5/N3rwgZ+Qj3uRTeVCFjY2NfRt7ExK1xyKT57RfT9GKYGNjYx/Ebo9Lbnjtc9oBRj0ewMbGxj6CnYc7+2XlxyXbdmVYt7GxsbEPZbeh/77UtbHRrIxhY2Njn8puS8K+CdkPJIYlEBsbG/to9s8dvmkbm7zVaZ+GjY2NfQN7c8imfWZCagvtcCqCjY2NfRm7BeS/aQ9cJtuBjY2NjT0Lg5JNyeOkfWuEjY2NfQ87eU0b+syWOxswvHkmNjY29tHsD0Q28XHJ/WjhY60INjY29hHsey5sbGxsbGxsbGzsr7n+AlX82Lvv57KpAAAAAElFTkSuQmCC">
+    
+</ul>
+
+    
 
     <!-- Tags (bookmark) -->
     
@@ -993,7 +1005,7 @@ It will not impact the appearance and can give developers a lot of support :)
     var copyrightNow = new Date().getFullYear();
     var textContent = document.querySelector('span[year]')
 
-    copyrightSince = 0000;
+    copyrightSince = 2016;
     if (copyrightSince === copyrightNow||copyrightSince === 0000) {
         textContent.textContent = copyrightNow
     } else {
