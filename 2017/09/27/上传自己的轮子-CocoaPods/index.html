@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="zh">
+    <head>
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.5.6 -->
+    <script>
+        window.materialVersion = "1.5.6"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1',
+            '1.5.0',
+            '1.5.2',
+            '1.5.5'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+
+    <link rel="dns-prefetch" href="https://busuanzi.ibruce.info"/>
+
+
+
+    <link rel="dns-prefetch" href="https://https-rensss-github-io.disqus.com"/>
+
+
+
+    <link rel="dns-prefetch" href="https://hm.baidu.com"/>
+
+
+
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com"/>
+
+
+
+
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- Title -->
+    
+    <title>
+        
+            上传自己的轮子_CocoaPods | 
+        
+        R_z_k__
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
+    <link rel="icon" href="/img/favicon.png">
+
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="description" itemprop="description" content="自己造轮子,上传到CocoaPod">
+    <meta name="keywords" content=",Mac,CocoaPods">
+    <meta name="theme-color" content="#0097A7">
+
+    <!-- Disable Fucking Bloody Baidu Tranformation -->
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?NKhlKQkXw/c66TR5p4wO+w==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+
+<!-- Import Material Icons -->
+
+
+    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==", true)</script>
+    
+
+    <!-- WebAPP Icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="R_z_k__">
+    <meta name="msapplication-starturl" content="https://rensss.github.io/2017/09/27/%E4%B8%8A%E4%BC%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E8%BD%AE%E5%AD%90-CocoaPods/">
+    <meta name="msapplication-navbutton-color" content="#0097A7">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="R_z_k__">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="/img/favicon.png">
+
+    <!-- Site Verification -->
+    <meta name="google-site-verification" content="CniRjRheG8vhywr3haqdj6C2XargVaSSf4Bdxwpi2u4" />
+    <meta name="baidu-site-verification" content="v7kRC3ZubK" />
+
+    <!-- RSS -->
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="https://rensss.github.io/2017/09/27/%E4%B8%8A%E4%BC%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E8%BD%AE%E5%AD%90-CocoaPods/">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="上传自己的轮子_CocoaPods | R_z_k__">
+    <meta property="og:image" content="/img/favicon.png">
+    <meta property="og:description" content="自己造轮子,上传到CocoaPod">
+    <meta property="og:article:tag" content="Mac"> <meta property="og:article:tag" content="CocoaPods"> 
+
+    
+        <meta property="article:published_time" content="Wed Sep 27 2017 13:18:50 GMT+0800">
+        <meta property="article:modified_time" content="Sun Feb 04 2018 13:34:59 GMT+0800">
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="https://rensss.github.io/2017/09/27/%E4%B8%8A%E4%BC%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E8%BD%AE%E5%AD%90-CocoaPods/index.html" />
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "https://rensss.github.io/2017/09/27/%E4%B8%8A%E4%BC%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E8%BD%AE%E5%AD%90-CocoaPods/index.html",
+    "headline": "上传自己的轮子_CocoaPods",
+    "datePublished": "Wed Sep 27 2017 13:18:50 GMT+0800",
+    "dateModified": "Sun Feb 04 2018 13:34:59 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "Rzk",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/avatar.png"
+        },
+        "description": "Hi, 欢迎来到我の杂货铺!"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "R_z_k__",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": ",Mac,CocoaPods",
+    "description": "自己造轮子,上传到CocoaPod",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+    
+        <script>
+    var _hmt = _hmt || [];
+    (function() {var hm = document.createElement('script');
+    hm.src = 'https://hm.baidu.com/hm.js?e8750d6c373ec40a06adf3b194c022b3';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+    
+    
+
+    <!-- Custom Head -->
+    
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span id="MD-burger-id" class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E6%AD%A5%E9%AA%A4"><span class="post-toc-number">1.</span> <span class="post-toc-text">步骤</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E7%BB%86%E8%8A%82"><span class="post-toc-number">2.</span> <span class="post-toc-text">细节</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E9%80%A0%E8%BD%AE%E5%AD%90-github-%E6%96%B0%E5%BB%BA%E9%A1%B9%E7%9B%AE-%E7%BD%91%E4%B8%8A%E6%95%99%E7%A8%8B%E5%BE%88%E5%A4%9A-%E8%BF%99%E9%87%8C%E5%B0%B1%E4%B8%8D%E5%86%8D%E8%B5%98%E8%BF%B0%E4%BA%86"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">造轮子 github 新建项目(网上教程很多,这里就不再赘述了)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#%E6%96%B0%E5%BB%BA%E9%A1%B9%E7%9B%AE"><span class="post-toc-number">2.1.1.</span> <span class="post-toc-text">新建项目</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#clone"><span class="post-toc-number">2.1.2.</span> <span class="post-toc-text">clone</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#%E4%BB%A3%E7%A0%81"><span class="post-toc-number">2.1.3.</span> <span class="post-toc-text">代码</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E6%B3%A8%E5%86%8Ctrunk"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">注册trunk</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E5%88%9B%E5%BB%BA-podspec%E6%96%87%E4%BB%B6-%E7%BC%96%E8%BE%91-%E9%AA%8C%E8%AF%81"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">创建.podspec文件 , 编辑 , 验证</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96pod-spec-create-%E9%A1%B9%E7%9B%AE%E5%90%8D%E5%AD%97"><span class="post-toc-number">2.3.1.</span> <span class="post-toc-text">初始化pod spec create #项目名字</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#%E7%BC%96%E8%BE%91-podspec%E6%96%87%E4%BB%B6"><span class="post-toc-number">2.3.2.</span> <span class="post-toc-text">编辑.podspec文件</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#%E6%9C%80%E7%BB%88%E7%9A%84-podspec%E6%96%87%E4%BB%B6"><span class="post-toc-number">2.3.3.</span> <span class="post-toc-text">最终的.podspec文件</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#%E9%AA%8C%E8%AF%81-podspec%E6%96%87%E4%BB%B6"><span class="post-toc-number">2.3.4.</span> <span class="post-toc-text">验证.podspec文件</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E5%8F%91%E5%B8%83trunk"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">发布trunk</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#%E5%8F%91%E5%B8%83"><span class="post-toc-number">2.4.1.</span> <span class="post-toc-text">发布</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#%E6%90%9C%E7%B4%A2"><span class="post-toc-number">2.4.2.</span> <span class="post-toc-text">搜索</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E7%BB%93%E8%AF%AD"><span class="post-toc-number">3.</span> <span class="post-toc-text">结语</span></a></li></ol>
+    </ul>
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                上传自己的轮子_CocoaPods
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>Rzk</strong>
+        <span>9月 27, 2017</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-none-link" href="/tags/CocoaPods/" rel="tag">CocoaPods</a></li><li class="mdl-menu__item"><a class="post_tag-none-link" href="/tags/Mac/" rel="tag">Mac</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+        
+            <!-- Busuanzi Views -->
+            <a class="post_share-link" href="#">
+                <li class="mdl-menu__item">
+                    <span id="busuanzi_container_page_pv">
+                        <span id="busuanzi_value_page_pv"></span>&nbsp;浏览量
+                    </span>
+                </li>
+            </a>
+        
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=上传自己的轮子_CocoaPods&url=https://rensss.github.io/2017/09/27/%E4%B8%8A%E4%BC%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E8%BD%AE%E5%AD%90-CocoaPods/index.html&pic=https://rensss.github.io/img/favicon.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=上传自己的轮子_CocoaPods&url=https://rensss.github.io/2017/09/27/%E4%B8%8A%E4%BC%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E8%BD%AE%E5%AD%90-CocoaPods/index.html&via=Rzk" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://rensss.github.io/2017/09/27/%E4%B8%8A%E4%BC%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E8%BD%AE%E5%AD%90-CocoaPods/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=R_z_k__&title=上传自己的轮子_CocoaPods&summary=杂七杂八の杂货铺&pics=https://rensss.github.io/img/favicon.png&url=https://rensss.github.io/2017/09/27/%E4%B8%8A%E4%BC%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E8%BD%AE%E5%AD%90-CocoaPods/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 QQ
+            </li>
+        </a>
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+    
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <p>自己造轮子,上传到CocoaPods</p>
+<span id="more"></span>
+
+<h3 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h3><ol>
+<li>造轮子(创建自己的项目) , github 新建 repository , clone 到本地(我的<a href="https://rensss.github.io/R_category/">轮子</a>)</li>
+<li>注册trunk,验证</li>
+<li>创建.podspec文件 , 编辑 , 验证</li>
+<li>发布trunk</li>
+</ol>
+<h3 id="细节"><a href="#细节" class="headerlink" title="细节"></a>细节</h3><ol>
+<li><h4 id="造轮子-github-新建项目-网上教程很多-这里就不再赘述了"><a href="#造轮子-github-新建项目-网上教程很多-这里就不再赘述了" class="headerlink" title="造轮子 github 新建项目(网上教程很多,这里就不再赘述了)"></a>造轮子 github 新建项目(网上教程很多,这里就不再赘述了)</h4></li>
+<li><h5 id="新建项目"><a href="#新建项目" class="headerlink" title="新建项目"></a>新建项目</h5><p><img src="http://upload-images.jianshu.io/upload_images/847229-d7e8cf0b245fcb08.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="创建新的项目.png"></p>
+</li>
+<li><h5 id="clone"><a href="#clone" class="headerlink" title="clone"></a>clone</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone #本地目录</span><br></pre></td></tr></table></figure></li>
+<li><h5 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">cd #进入工程文件 </span><br><span class="line">git add . </span><br><span class="line">git commit -m &#x27;0.0.1&#x27; </span><br><span class="line">git push origin master </span><br><span class="line">git tag 0.0.1 </span><br><span class="line">git push —tag</span><br></pre></td></tr></table></figure></li>
+<li><h4 id="注册trunk"><a href="#注册trunk" class="headerlink" title="注册trunk"></a>注册trunk</h4><ul>
+<li>注册 <code>pod trunk register renzzz@qq.com v587 —verbose</code></li>
+<li>去邮箱复制链接到浏览器访问,就ok了</li>
+<li>验证下<code>pod trunk me</code><br><img src="http://upload-images.jianshu.io/upload_images/847229-33861a5b115e7054.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="pod trunk me.png"><blockquote>
+<p><strong>ps:</strong><br>​Pods:下是已发布的轮子</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><h4 id="创建-podspec文件-编辑-验证"><a href="#创建-podspec文件-编辑-验证" class="headerlink" title="创建.podspec文件 , 编辑 , 验证"></a>创建.podspec文件 , 编辑 , 验证</h4><ol>
+<li><h5 id="初始化pod-spec-create-项目名字"><a href="#初始化pod-spec-create-项目名字" class="headerlink" title="初始化pod spec create #项目名字"></a>初始化<code>pod spec create #项目名字</code></h5></li>
+<li><h5 id="编辑-podspec文件"><a href="#编辑-podspec文件" class="headerlink" title="编辑.podspec文件"></a>编辑.podspec文件</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br></pre></td><td class="code"><pre><span class="line">#</span><br><span class="line">#  Be sure to run &#x27;pod spec lint R_category.podspec&#x27; to ensure this </span><br><span class="line">#  is a valid spec and to remove all comments including this before </span><br><span class="line">#  submitting the spec.</span><br><span class="line">#  To learn more about Podspec attributes see </span><br><span class="line">#  http://docs.cocoapods.org/specification.html</span><br><span class="line">#  To see working Podspecs in the CocoaPods repo see</span><br><span class="line">#  https://github.com/CocoaPods/Specs/</span><br><span class="line">#</span><br><span class="line">#  一定要运行 &#x27;pod spec lint xx.podspec&#x27;来确保.podspec文件是有效的。</span><br><span class="line">#  并且最后在提交.podspec之前要移除所有注释.</span><br><span class="line">#  可以了解更过关于Podspec，通过http://docs.cocoapods.org/specification.html</span><br><span class="line">#  see https://github.com/CocoaPods/Specs/</span><br><span class="line"></span><br><span class="line">Pod::Spec.new do |s|</span><br><span class="line"></span><br><span class="line"># ―――――――――――――――――  Spec Metadata ――――――――――――――――――――― #</span><br><span class="line">#</span><br><span class="line">#  These will help people to find your library, and whilst it</span><br><span class="line">#  can feel like a chore to fill in it&#x27;s definitely to your advantage.</span><br><span class="line">#  The</span><br><span class="line">#  summary should be tweet-length, and the description more in depth.</span><br><span class="line"># </span><br><span class="line"># ―――――――――――――――――  Spec 元数据  ――――――――――――――――――――――― #</span><br><span class="line">#</span><br><span class="line">#  这些将帮助人们找到你的库，同时在成为你的优势之前可能感觉是麻烦的。</span><br><span class="line">#  概要的长度限制与推特的一样（140），并且这个描述更加深入</span><br><span class="line">#  s.summary最好不要与s.description一样，会报警告(多写两字不会死)</span><br><span class="line"></span><br><span class="line">  s.name         = &quot;R_category&quot;</span><br><span class="line">  s.version      = &quot;0.0.1&quot;</span><br><span class="line">  s.summary      = &quot;A short description of R_category.&quot;</span><br><span class="line"></span><br><span class="line">#  This description is used to generate tags and improve search </span><br><span class="line">#  results.</span><br><span class="line">#  * Think: What does it do? Why did you write it? What is the focus?</span><br><span class="line">#  * Try to keep it short, snappy and to the point.</span><br><span class="line">#  * Write the description between the DESC delimiters below.</span><br><span class="line">#  * Finally, don&#x27;t worry about the indent, CocoaPods strips it!</span><br><span class="line">  </span><br><span class="line">#  这个描述用来生成标签和改善搜索结果</span><br><span class="line">#  思考:它做了什么？你为什么要写它？重点是什么？</span><br><span class="line">#  尽力保持它简短，精炼</span><br><span class="line">#  在DESC之间写这个描述</span><br><span class="line">#  最后不要担心缩进。cocoapods将做它。</span><br><span class="line">  </span><br><span class="line">  s.description  = &lt;&lt;-DESC</span><br><span class="line"> 			zheshiyigejiandandemiaoshu(这是一个简单的描述)</span><br><span class="line">  					DESC</span><br><span class="line">               </span><br><span class="line">#  主页地址，直接填写我们的仓库地址即可</span><br><span class="line">  s.homepage     = &quot;http://EXAMPLE/R_category&quot;</span><br><span class="line">#  屏幕截图(不需要关心，直接删除即可)</span><br><span class="line">#  s.screenshots  = &quot;www.example.com/screenshots_1.gif&quot;, </span><br><span class="line">#  &quot;www.example.com/screenshots_2.gif&quot;</span><br><span class="line"></span><br><span class="line"># ――――――――――――――――――  Spec License  ―――――――――――――――――――― #</span><br><span class="line">#</span><br><span class="line">#  Licensing your code is important. See http://choosealicense.com for </span><br><span class="line">#  more info.</span><br><span class="line">#  CocoaPods will detect a license file if there is a named LICENSE*</span><br><span class="line">#  Popular ones are &#x27;MIT&#x27;, &#x27;BSD&#x27; and &#x27;Apache License, Version 2.0&#x27;.</span><br><span class="line">#</span><br><span class="line"># ―――――――――――――――――――  Spec 授权  ――――――――――――――――――――――― #</span><br><span class="line">#</span><br><span class="line">#  授权你的代码是很重要的。查看http://choosealicense.com得到更多的信息</span><br><span class="line">#  CocoaPods 如果这里有一个命名为LICENSE*的文件，那么Cocoapods将检测这个授权文件</span><br><span class="line">#  主要的授权为:&#x27;MIT&#x27;, &#x27;BSD&#x27; and &#x27;Apache License, Version 2.0&#x27;</span><br><span class="line">  s.license      = &quot;MIT&quot;</span><br><span class="line">#  s.license      = &#123; :type =&gt; &quot;MIT&quot;, :file =&gt; &quot;FILE_LICENSE&quot; &#125;</span><br><span class="line"></span><br><span class="line"># ――――――――――――――――― Author Metadata ――――――――――――――――――― #</span><br><span class="line">#</span><br><span class="line">#  Specify the authors of the library, with email addresses. Email </span><br><span class="line">#  addresses</span><br><span class="line">#  of the authors are extracted from the SCM log. E.g. $ git log.</span><br><span class="line">#  CocoaPods also</span><br><span class="line">#  accepts just a name if you&#x27;d rather not provide an email address.</span><br><span class="line">#</span><br><span class="line">#  Specify a social_media_url where others can refer to, for example a </span><br><span class="line">#  twitter</span><br><span class="line">#  profile URL.</span><br><span class="line">  </span><br><span class="line"># ――――――――――――――――― 作者 元数据  ―――――――――――――――――――――――― #</span><br><span class="line">#</span><br><span class="line">#  指定这个库的作者和email地址。</span><br><span class="line">#  作者的email地址也可以通过 $ git log来提取。</span><br><span class="line">#  如果你不愿意提供邮箱，CocoaPods也接受仅仅一个名字</span><br><span class="line">#  指定一个别人可以访问的社交账号，例如推特</span><br><span class="line">#  s.social_media_url这一项最好不要指定了，因为推特国内无法访问，验证.podsec时，</span><br><span class="line">#  不通过。</span><br><span class="line"></span><br><span class="line">#  填写用户名以及自己的github邮箱</span><br><span class="line">  s.author             = &#123; &quot;lhjzzu&quot; =&gt; &quot;1822657131@qq.com&quot; &#125;</span><br><span class="line">#  Or just: s.author    = &quot;lhjzzu&quot;</span><br><span class="line">#  s.authors            = &#123; &quot;lhjzzu&quot; =&gt; &quot;1822657131@qq.com&quot; &#125;</span><br><span class="line">#  s.social_media_url   = &quot;http://twitter.com/lhjzzu&quot;</span><br><span class="line"></span><br><span class="line"># ――――――――――――――――――― Platform Specifics ――――――――――――――― #</span><br><span class="line">#</span><br><span class="line">#  If this Pod runs only on iOS or OS X, then specify the platform and</span><br><span class="line">#  the deployment target. You can optionally include the target after </span><br><span class="line">#  the platform.</span><br><span class="line">  </span><br><span class="line"># ――――――――――――――――――― 平台的指定 ―――――――――――――――――――――― #</span><br><span class="line">#</span><br><span class="line">#  如果你的Pod仅仅运行在iOS或者OS X上，那么要指定platform以及deployment </span><br><span class="line">#  target。</span><br><span class="line">#  一般而言，我们直选择</span><br><span class="line">#  s.platform = :ios和s.ios.deployment_target = &quot;5.0&quot;</span><br><span class="line">#  s.platform     = :ios, &quot;5.0&quot;与上面两句话相等</span><br><span class="line">#  s.platform     = :ios</span><br><span class="line">  s.platform     = :ios, &quot;5.0&quot;</span><br><span class="line"></span><br><span class="line">#  When using multiple platforms</span><br><span class="line">#  s.ios.deployment_target = &quot;5.0&quot;</span><br><span class="line">#  s.osx.deployment_target = &quot;10.7&quot;</span><br><span class="line">#  s.watchos.deployment_target = &quot;2.0&quot;</span><br><span class="line">#  s.tvos.deployment_target = &quot;9.0&quot;</span><br><span class="line"></span><br><span class="line"># ――――――――――――――――― Source Location ―――――――――――――――――――― #</span><br><span class="line">#</span><br><span class="line">#  Specify the location from where the source should be retrieved.</span><br><span class="line">#  Supports git, hg, bzr, svn and HTTP.</span><br><span class="line">#</span><br><span class="line">  </span><br><span class="line"># ――――――――――――――――――― 资源的位置 ――――――――――――――――――――――――― #</span><br><span class="line">#</span><br><span class="line">#  指定将被拉取的资源的位置</span><br><span class="line">#  支持 git, hg, bzr, svn and HTTP.</span><br><span class="line">#  http://EXAMPLE/R_category.git 就是我们仓库的地址(一定不要忘了.git)</span><br><span class="line">#  tag =&gt; &quot;0.0.1&quot; 就是我们打的标签</span><br><span class="line">  </span><br><span class="line">  s.source       = &#123; :git =&gt; &quot;http://EXAMPLE/R_category.git&quot;, :tag =&gt; &quot;0.0.1&quot; &#125;</span><br><span class="line"># ――――――――――――――――― Source Code ――――――――――――――――――――――― #</span><br><span class="line">#</span><br><span class="line">#  CocoaPods is smart about how it includes source code. For source </span><br><span class="line">#  files</span><br><span class="line">#  giving a folder will include any swift, h, m, mm, c &amp; cpp files.</span><br><span class="line">#  For header files it will include any header in the folder.</span><br><span class="line">#  Not including the public_header_files will make all headers public.</span><br><span class="line">#</span><br><span class="line">  </span><br><span class="line"># ――――――――――――――――――― 源码 ――――――――――――――――――――――――――――― #</span><br><span class="line">#</span><br><span class="line">#  对于怎样去包含源码，cocoapods是很聪明的。</span><br><span class="line">#  s.source_files将包含所有的源文件（swift, h, m, mm, c &amp; cpp）</span><br><span class="line">#  s.exclude_files要排除的文件（一般直接删除即可）</span><br><span class="line">#  s.public_header_files 指定我们想公开的头文件</span><br><span class="line">#  如果不含有s.public_header_files，那么我们的.h文件是默认全部公开的。</span><br><span class="line">  s.source_files  = &quot;R_category&quot;, &quot;R_category/**/*.&#123;h,m&#125;&quot;</span><br><span class="line">#  s.exclude_files = &quot;Classes/Exclude&quot;</span><br><span class="line">#  s.public_header_files = &quot;Classes/**/*.h&quot;</span><br><span class="line"># ――――――――――――――――――― Resources ――――――――――――――――――――――― #</span><br><span class="line">#</span><br><span class="line">#  A list of resources included with the Pod. These are copied into the</span><br><span class="line">#  target bundle with a build phase script. Anything else will be </span><br><span class="line">#  cleaned.</span><br><span class="line">#  You can preserve files from being cleaned, please don&#x27;t preserve</span><br><span class="line">#  non-essential files like tests, examples and documentation.</span><br><span class="line">#</span><br><span class="line"># ――――――――――――――――――― 资源 ―――――――――――――――――――――――――――― #</span><br><span class="line">#</span><br><span class="line">#  这个Pod包含的一系列的资源。在编译脚本的阶段，它们被复制到这个目标bundle中。</span><br><span class="line">#  其它的任何资源将被清理。你可以保护文件免于被清理，但是请不要保存不必要的文件</span><br><span class="line">#  例如tests，examples，documentation</span><br><span class="line"></span><br><span class="line">#  s.resource  = &quot;icon.png&quot;</span><br><span class="line">#  s.resources = &quot;Resources/*.png&quot;</span><br><span class="line">#  s.preserve_paths = &quot;FilesToSave&quot;, &quot;MoreFilesToSave&quot;</span><br><span class="line"></span><br><span class="line"># ―――――――――――――――――― Project Linking ――――――――――――――――――――#</span><br><span class="line">#</span><br><span class="line">#  Link your library with frameworks, or libraries. Libraries do not </span><br><span class="line">#  include</span><br><span class="line">#  the lib prefix of their name.</span><br><span class="line">  </span><br><span class="line"># ――――――――――――――――――― 项目 链接 ―――――――――――――――――――――――――― #</span><br><span class="line">#</span><br><span class="line">#  链接你的Framework和library（系统的Framework，library）. </span><br><span class="line">#  librarys的指定不包含lib的前缀，例如libxml2.tbd</span><br><span class="line">  </span><br><span class="line">#  s.framework  = &quot;SomeFramework&quot;</span><br><span class="line">#  s.frameworks = &quot;SomeFramework&quot;, &quot;AnotherFramework&quot;</span><br><span class="line"></span><br><span class="line">#  s.library   = &quot;iconv&quot;</span><br><span class="line">#  s.libraries = &quot;iconv&quot;, &quot;xml2&quot;</span><br><span class="line"> </span><br><span class="line"># ――――――――――――――――――― Project Settings ――――――――――――――――― #</span><br><span class="line">#</span><br><span class="line">#  If your library depends on compiler flags you can set them in the </span><br><span class="line">#  xcconfig hash</span><br><span class="line">#  where they will only apply to your library. If you depend on other </span><br><span class="line">#  Podspecs</span><br><span class="line">#  you can include multiple dependencies to ensure it works.</span><br><span class="line"></span><br><span class="line"># ――――――――――――――――――― 项目 设置 ――――――――――――――――――――――――― #</span><br><span class="line">#  如果你的library依赖一个compiler flags。你能设置他们在xcconfig，它们将应用于你</span><br><span class="line">#  的lib中。</span><br><span class="line">#  如果你的pods依赖其他的Podspecs，你能够包含多个依赖来确保它工作。</span><br><span class="line">#  s.requires_arc指定是否为ARC</span><br><span class="line">#  s.xcconfig做一些配置</span><br><span class="line">#  s.dependency指定依赖</span><br><span class="line">  </span><br><span class="line">#  s.requires_arc = true</span><br><span class="line">#  s.xcconfig = &#123; &quot;HEADER_SEARCH_PATHS&quot; =&gt; &quot;$(SDKROOT)/usr/include/libxml2&quot; &#125;</span><br><span class="line">#  s.dependency &quot;JSONKit&quot;, &quot;~&gt; 1.4&quot;</span><br><span class="line">end</span><br></pre></td></tr></table></figure></li>
+<li><h5 id="最终的-podspec文件"><a href="#最终的-podspec文件" class="headerlink" title="最终的.podspec文件"></a>最终的.podspec文件</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">Pod::Spec.new do |s|</span><br><span class="line">	s.name         = &quot;R_category&quot;</span><br><span class="line">	s.version      = &quot;0.0.1&quot;</span><br><span class="line">	s.summary      = &quot;一个简单的分类扩展.&quot;</span><br><span class="line">	s.description  = &lt;&lt;-DESC</span><br><span class="line">				a simple demo</span><br><span class="line">						DESC</span><br><span class="line">	s.homepage     = &quot;https://github.com/rensss/R_category&quot;</span><br><span class="line">	s.license      = &#x27;MIT&#x27;</span><br><span class="line">	s.author       = &#123; &quot;v587&quot; =&gt; &quot;renzzz@qq.com&quot; &#125;</span><br><span class="line">	s.platform     = :ios</span><br><span class="line">	s.ios.deployment_target = &quot;5.0&quot;</span><br><span class="line"></span><br><span class="line">	s.source       = &#123; :git =&gt; &quot;https://github.com/rensss/R_category.git&quot;, :tag =&gt; &quot;0.0.1&quot; &#125;</span><br><span class="line"></span><br><span class="line">	s.source_files  = &quot;category_Class&quot;, &quot;category_Class/*.&#123;h,m&#125;&quot;</span><br><span class="line">	# s.exclude_files = &quot;Classes/Exclude&quot;</span><br><span class="line">	# s.public_header_files = &quot;Classes/**/*.h&quot;</span><br><span class="line"></span><br><span class="line">	s.requires_arc = true</span><br><span class="line">	# s.xcconfig = &#123; &quot;HEADER_SEARCH_PATHS&quot; =&gt; &quot;$(SDKROOT)/usr/include/libxml2&quot; &#125;</span><br><span class="line">	# s.dependency &quot;JSONKit&quot;, &quot;~&gt; 1.4&quot;</span><br><span class="line">end</span><br></pre></td></tr></table></figure></li>
+<li><h5 id="验证-podspec文件"><a href="#验证-podspec文件" class="headerlink" title="验证.podspec文件"></a>验证.podspec文件</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pod spec lint R_category.podspec --verbose</span><br><span class="line">如果出现下面的信息，表示验证通过</span><br><span class="line">R_category.podspec passed validation. </span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><strong>ps:</strong><br><code>--vebose</code>:打印细节，可以把执行过程中具体的信息打印出来<br><img src="http://upload-images.jianshu.io/upload_images/847229-005e8ae9de7a6ea0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="pod spec lint.png"><br><code>--allow-warnings</code> 表示忽略警告 当有警告不通过时 添加此参数</p>
+</blockquote>
+</li>
+</ol>
+</li>
+<li><h4 id="发布trunk"><a href="#发布trunk" class="headerlink" title="发布trunk"></a>发布trunk</h4><ol>
+<li><h5 id="发布"><a href="#发布" class="headerlink" title="发布"></a>发布</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">pod trunk push R_category.podspec --verbose </span><br><span class="line">如果有下面的信息显示，表明push成功</span><br><span class="line">  - Data URL: xxxxxxxx</span><br><span class="line">  - Log messages:</span><br><span class="line">  - May 9th, 23:29: Push for &#x27;R_category 0.0.1&#x27; initiated.</span><br><span class="line">  - May 9th, 23:29: Push for &#x27;R_category 0.0.1&#x27; has been pushed  (3.41790716 s).</span><br></pre></td></tr></table></figure></li>
+<li><h5 id="搜索"><a href="#搜索" class="headerlink" title="搜索"></a>搜索</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pod search R_category</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><strong>ps:</strong><br>​最好停一段时间再搜索<br>​请先更新本地pod库 <code>pod setup</code> 或者 <code>Pod repo update</code><br>​如果还是搜索不到,请删除search_index.json文件.在这个目录下<br><code>/Users/&lt;你的用户名&gt;/Library/Caches/CocoaPods/</code><br><img src="http://upload-images.jianshu.io/upload_images/847229-d80d586cdbdd833a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/840" alt="search_index_json.png"></p>
+</blockquote>
+</li>
+</ol>
+</li>
+</ol>
+<h3 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h3><p>   报错时请不要慌张,不要放弃,你终将成功的!</p>
+<blockquote>
+<p>下篇<a href="https://rensss.github.io/2017/10/10/%E4%B8%8A%E4%BC%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E8%BD%AE%E5%AD%90-CocoaPods-%E7%BB%AD/">上传自己的轮子-CocoaPods(续)</a></p>
+</blockquote>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 DISQUS -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'https://rensss.github.io/2017/09/27/%E4%B8%8A%E4%BC%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E8%BD%AE%E5%AD%90-CocoaPods/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'https://rensss.github.io/2017/09/27/%E4%B8%8A%E4%BC%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E8%BD%AE%E5%AD%90-CocoaPods/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+<script type="text/ls-javascript" id="disqus-thread-script">
+    queue.offer(function() {
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document;
+                var s = d.createElement('script');
+                s.src = '//https-rensss-github-io.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', + new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        });
+</script>
+
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2017/10/10/%E4%B8%8A%E4%BC%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E8%BD%AE%E5%AD%90-CocoaPods-%E7%BB%AD/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2017/08/09/%E4%BD%BF%E7%94%A8PM2%E8%AE%A9hexo%E5%A7%8B%E7%BB%88%E8%BF%90%E8%A1%8C/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(https://i.loli.net/2021/06/29/H7E1nikC4oTdvUl.jpg);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/avatar.png" alt="Rzk's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        renssss@foxmail.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="mailto:renssss@foxmail.com" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    归档
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2021/06/">六月 2021<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/06/">六月 2020<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/10/">十月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/09/">九月 2019<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/08/">八月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/05/">五月 2018<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/10/">十月 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/09/">九月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/08/">八月 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/06/">六月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/02/">二月 2016<span class="sidebar_archives-count">1</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
+                
+                分类
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                <a class="sidebar_archives-link" href="/categories/Hexo/">Hexo<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/PM2/">PM2<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/%E5%BC%80%E5%8F%91/">开发<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/categories/%E6%9D%82%E7%B1%BB/">杂类<span class="sidebar_archives-count">1</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Pages  -->
+    
+        <li>
+            <a href="/tags" title="标签">
+                
+                    <i class="material-icons sidebar-material-icons">bookmark border</i>
+                
+                标签
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/timeline" title="时间线">
+                
+                    <i class="material-icons sidebar-material-icons">timeline</i>
+                
+                时间线
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/about" title="About ME">
+                
+                    <i class="material-icons sidebar-material-icons">person</i>
+                
+                About ME
+            </a>
+        </li>
+        
+            <li class="divider"></li>
+        
+    
+
+    <!-- Article Number  -->
+    
+        <li>
+            <a href="/archives">
+                文章总数
+                <span class="sidebar-badge">16</span>
+            </a>
+        </li>
+        
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+
+<!-- Theme Material -->
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+        <a href="https://twitter.com/v587_Ren" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-twitter">
+                <span class="visuallyhidden">Twitter</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Facebook -->
+    
+
+    <!-- Google + -->
+    
+
+    <!-- Weibo -->
+    
+        <a href="http://weibo.com/u/3748258354" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-weibo">
+                <span class="visuallyhidden">Weibo</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+        <a href="https://github.com/rensss" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+        <a href="https://www.zhihu.com/people/Odin_911/activities" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-zhihu">
+                <span class="visuallyhidden">Zhihu</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+
+    <!-- V2EX -->
+    
+
+    <!-- Segmentfault -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©&nbsp;<span year></span>&nbsp;R_z_k__
+            
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
+
+
+
+    <script>lsloader.load("js_js","/js/js.min.js?Bn9UzEm8RrBSxqyZB0zPjA==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+
+
+    <!-- Busuanzi -->
+    <script src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+   <!-- 使用 DISQUS js 代码 -->
+<script id="dsq-count-scr" src="//https-rensss-github-io.disqus.com/count.js" async></script>
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('
+<link rel="stylesheet" href="/css/uc.css">
+');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Import prettify js  -->
+
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+    
+</script>
+
+<!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    var copyrightNow = new Date().getFullYear();
+    var textContent = document.querySelector('span[year]')
+
+    copyrightSince = 0000;
+    if (copyrightSince === copyrightNow||copyrightSince === 0000) {
+        textContent.textContent = copyrightNow
+    } else {
+        textContent.textContent = copyrightSince + ' - ' + copyrightNow
+    }
+
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.6 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        </body>
+    
+</html>
