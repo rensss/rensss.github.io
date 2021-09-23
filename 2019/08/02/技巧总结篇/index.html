@@ -248,7 +248,7 @@
 
     
         <meta property="article:published_time" content="Fri Aug 02 2019 17:08:58 GMT+0800">
-        <meta property="article:modified_time" content="Tue Jun 29 2021 15:08:45 GMT+0800">
+        <meta property="article:modified_time" content="Tue Jun 29 2021 15:12:14 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -271,7 +271,7 @@
     "mainEntityOfPage": "https://rensss.github.io/2019/08/02/%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93%E7%AF%87/index.html",
     "headline": "技巧总结篇",
     "datePublished": "Fri Aug 02 2019 17:08:58 GMT+0800",
-    "dateModified": "Tue Jun 29 2021 15:08:45 GMT+0800",
+    "dateModified": "Tue Jun 29 2021 15:12:14 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "Rzk",
@@ -556,7 +556,7 @@ The methods in the UIConstraintBasedLayoutDebugging category on UIView listed in
 <p>那么你可以添加一种布局短点，在布局出现问题时可以添加<code>Symbolic breakpoint</code>断点。<br>内容填为<code>UIViewAlertForUnsatisfiableConstraints</code>。<br>如下：<br><img src="http://tva1.sinaimg.cn/large/007X8olVly1g7rt0frh4jj30qg0amqhn.jpg" width="100%" height="30%"><br>然而并没有什么卵用，直接断到线程堆栈上。啥有用的信息都没有…………</p>
 <p>那么应该怎么搞呢，这里有个小技巧。在上面那个断点中添加<code>action</code><br><code>po [[UIWindow keyWindow] _autolayoutTrace]</code><br>如下图：<br><img src="http://tva1.sinaimg.cn/large/007X8olVly1g7rt11vubij30qy0d2nfy.jpg" width="100%" height="30%" /></p>
 <p>会得到类似下图的view层次结构:</p>
-<img src="http://tva1.sinaimg.cn/large/007X8olVly1g7rt1e2szqj30u00xmaqs.jpg" width="30%" height="30%" />
+<img src="http://tva1.sinaimg.cn/large/007X8olVly1g7rt1e2szqj30u00xmaqs.jpg" />
 
 <p>还是不够直接啊…  那么你可以</p>
 <pre><code>(lldb) e id $myView = (id) 0x7fd6d5d239e0
