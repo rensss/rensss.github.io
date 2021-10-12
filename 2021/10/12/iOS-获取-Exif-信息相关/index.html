@@ -52,7 +52,7 @@
     
     <title>
         
-            Markdown语法 | 
+            iOS 获取 Exif 信息相关 | 
         
         R_z_k__
     </title>
@@ -62,8 +62,8 @@
     <link rel="icon" href="/img/favicon.png">
 
     <meta name="format-detection" content="telephone=no"/>
-    <meta name="description" itemprop="description" content="Markdown 常用语法">
-    <meta name="keywords" content=",Hexo">
+    <meta name="description" itemprop="description" content="关于获取图片文件的 Exif 信息的 Demo">
+    <meta name="keywords" content=",Exif,iOS,PHImageManager,CGImageProperties">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -224,7 +224,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="R_z_k__">
-    <meta name="msapplication-starturl" content="https://rensss.github.io/2018/05/12/Markdown%E8%AF%AD%E6%B3%95/">
+    <meta name="msapplication-starturl" content="https://rensss.github.io/2021/10/12/iOS-%E8%8E%B7%E5%8F%96-Exif-%E4%BF%A1%E6%81%AF%E7%9B%B8%E5%85%B3/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="R_z_k__">
@@ -239,16 +239,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="https://rensss.github.io/2018/05/12/Markdown%E8%AF%AD%E6%B3%95/">
+    <meta property="og:url" content="https://rensss.github.io/2021/10/12/iOS-%E8%8E%B7%E5%8F%96-Exif-%E4%BF%A1%E6%81%AF%E7%9B%B8%E5%85%B3/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="Markdown语法 | R_z_k__">
+    <meta property="og:title" content="iOS 获取 Exif 信息相关 | R_z_k__">
     <meta property="og:image" content="/img/favicon.png">
-    <meta property="og:description" content="Markdown 常用语法">
-    <meta property="og:article:tag" content="Hexo"> 
+    <meta property="og:description" content="关于获取图片文件的 Exif 信息的 Demo">
+    <meta property="og:article:tag" content="Exif"> <meta property="og:article:tag" content="iOS"> <meta property="og:article:tag" content="PHImageManager"> <meta property="og:article:tag" content="CGImageProperties"> 
 
     
-        <meta property="article:published_time" content="Sat May 12 2018 18:17:33 GMT+0800">
-        <meta property="article:modified_time" content="Fri Aug 09 2019 16:22:23 GMT+0800">
+        <meta property="article:published_time" content="Tue Oct 12 2021 16:51:49 GMT+0800">
+        <meta property="article:modified_time" content="Tue Oct 12 2021 16:51:49 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -256,7 +256,7 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="https://rensss.github.io/2018/05/12/Markdown%E8%AF%AD%E6%B3%95/index.html" />
+        <link rel="canonical" href="https://rensss.github.io/2021/10/12/iOS-%E8%8E%B7%E5%8F%96-Exif-%E4%BF%A1%E6%81%AF%E7%9B%B8%E5%85%B3/index.html" />
     
 
     <!-- Structured-data for SEO -->
@@ -268,10 +268,10 @@
 {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "mainEntityOfPage": "https://rensss.github.io/2018/05/12/Markdown%E8%AF%AD%E6%B3%95/index.html",
-    "headline": "Markdown语法",
-    "datePublished": "Sat May 12 2018 18:17:33 GMT+0800",
-    "dateModified": "Fri Aug 09 2019 16:22:23 GMT+0800",
+    "mainEntityOfPage": "https://rensss.github.io/2021/10/12/iOS-%E8%8E%B7%E5%8F%96-Exif-%E4%BF%A1%E6%81%AF%E7%9B%B8%E5%85%B3/index.html",
+    "headline": "iOS 获取 Exif 信息相关",
+    "datePublished": "Tue Oct 12 2021 16:51:49 GMT+0800",
+    "dateModified": "Tue Oct 12 2021 16:51:49 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "Rzk",
@@ -289,8 +289,8 @@
             "url": "/img/favicon.png"
         }
     },
-    "keywords": ",Hexo",
-    "description": "Markdown 常用语法",
+    "keywords": ",Exif,iOS,PHImageManager,CGImageProperties",
+    "description": "关于获取图片文件的 Exif 信息的 Demo",
 }
 </script>
 
@@ -364,7 +364,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Markdown-%E8%AF%AD%E6%B3%95"><span class="post-toc-number">1.</span> <span class="post-toc-text">Markdown 语法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF-Markdown"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">什么是 Markdown</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#1-%E5%88%B6%E4%BD%9C%E4%B8%80%E4%BB%BD%E5%BE%85%E5%8A%9E%E4%BA%8B%E5%AE%9C"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">1. 制作一份待办事宜</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#2-%E4%B9%A6%E5%86%99%E4%B8%80%E4%B8%AA%E8%B4%A8%E8%83%BD%E5%AE%88%E6%81%92%E5%85%AC%E5%BC%8F-LaTeX"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">2. 书写一个质能守恒公式[^LaTeX]</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#3-%E9%AB%98%E4%BA%AE%E4%B8%80%E6%AE%B5%E4%BB%A3%E7%A0%81-code"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">3. 高亮一段代码[^code]</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#4-%E9%AB%98%E6%95%88%E7%BB%98%E5%88%B6"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">4. 高效绘制</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#5-%E9%AB%98%E6%95%88%E7%BB%98%E5%88%B6"><span class="post-toc-number">1.6.</span> <span class="post-toc-text">5. 高效绘制</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#6-%E9%AB%98%E6%95%88%E7%BB%98%E5%88%B6"><span class="post-toc-number">1.7.</span> <span class="post-toc-text">6. 高效绘制</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#7-%E7%BB%98%E5%88%B6%E8%A1%A8%E6%A0%BC"><span class="post-toc-number">1.8.</span> <span class="post-toc-text">7. 绘制表格</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#8-%E6%9B%B4%E8%AF%A6%E7%BB%86%E8%AF%AD%E6%B3%95%E8%AF%B4%E6%98%8E"><span class="post-toc-number">1.9.</span> <span class="post-toc-text">8. 更详细语法说明</span></a></li></ol></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#ExifDemo"><span class="post-toc-number">1.</span> <span class="post-toc-text">ExifDemo</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#EXIF%E4%BF%A1%E6%81%AF"><span class="post-toc-number">1.0.0.0.1.</span> <span class="post-toc-text">EXIF信息</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#EXIF-%E4%BB%A5%E4%B8%8B%E4%B8%BA%E5%8F%AF%E8%83%BD%E5%8C%85%E5%90%AB%E7%9A%84%E4%BF%A1%E6%81%AF"><span class="post-toc-number">1.0.0.0.2.</span> <span class="post-toc-text">EXIF 以下为可能包含的信息:</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#UIImagePickerController-%E8%A7%A3%E6%9E%90%E5%88%B0%E7%9A%84-Exif-%E4%BF%A1%E6%81%AF%E5%A6%82%E4%B8%8B"><span class="post-toc-number">1.0.0.0.3.</span> <span class="post-toc-text">UIImagePickerController 解析到的 Exif 信息如下:</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#PHImageManager-%E8%8E%B7%E5%8F%96-asset-%E6%8B%BF%E5%88%B0%E5%8E%9F%E5%A7%8B-data-%E5%90%8E%E7%BB%8F%E8%BF%87%E8%A7%A3%E6%9E%90%E5%8F%AF%E4%BB%A5%E5%BE%97%E5%88%B0%E5%A6%82%E4%B8%8B%E4%BF%A1%E6%81%AF"><span class="post-toc-number">1.0.0.0.4.</span> <span class="post-toc-text">PHImageManager 获取 asset 拿到原始 data 后经过解析可以得到如下信息:</span></a></li></ol></li></ol></li></ol></li></ol></li></ol>
     </ul>
     
 
@@ -396,7 +396,7 @@
         
     
             <p class="article-headline-p">
-                Markdown语法
+                iOS 获取 Exif 信息相关
             </p>
         </div>
 
@@ -415,7 +415,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>Rzk</strong>
-        <span>5月 12, 2018</span>
+        <span>10月 12, 2021</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -437,7 +437,7 @@
 <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
     <li class="mdl-menu__item">在其它设备中阅读本文章</li>
     
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAAC3klEQVR42u3aQXLbMBAEQP3/08k1h5CaWSgxBTRPLJsi2VCV1zuL168jjxc2NjY2NjY2Njb2I9mv+Lj61F8e8MfP8/Orp1zdv35nbGxs7K3Zb/70316TwFpesujtO2NjY2OfwL56WIJJfntffvLlbt8ZGxsbGztpIfLSlVDzAoaNjY2NPWPn1KhJKIsZNjY2NvZKQHN/6zw8miF/LEvDxsbGfjw7H5o+5/y/zrexsbGxH8xuj3w8kGz3WRk81G+OjY2NvSk7LwxJs5G3KLNoqX1PbGxs7NPYbeFZGejOGo+lRcfGxsY+gH3/gJXIPrlD/jXkm36wsbGxz2HnA9c6lP/QYs0+i42NjX0Cux0AzDBJW5I0M/koGhsbG/sc9ixqX2lm2hgr/3rqQS82Njb2puy8JchLyGw7TlvGhh0YNjY29pez8wi+bQOGDUOwWMNCi42NjX0AezYGaEvLLEhKSuObMoyNjY29NXsW0+Sbb9bblfWwCRsbG/sEdtui5K3Cfcn5F4tVz7exsbGxv5bdRvwrI4HkievtytJUBBsbG/sL2bMWoh0G5Bt01iOtYjyAjY2NvRE7D/RnzUkObgOmPA7DxsbG3pW9skVm1q68aRgWClsdKmFjY2NvxG7/uZ81IUnbkw96k5KJjY2NfQ47j5ZmGx9ni/ipwQM2Njb2CewEn5eiPKhq24k2rsLGxsY+hz07ny1QHeuXI96lLA0bGxt7C/Zsc2QeFeWYzxYzbGxs7BPYH4jgy4hqNtCdjSWwsbGxd2XPmoc80Mmj//WRczHoxcbGxt6IPSsM+TXt8GD9vB70YmNjY2/BbkOidqtlsqA/UMCwsbGxt2O3myzzIne/0Al+tnDY2NjY2OstwfrIoR0MXy4uNjY2Nnbw6rP7tKOIdoCBjY2NfQ47CZXaYrNCaoOnYQHDxsbG3oI9C27aK/OgPw+q8mgJGxsbe1f2OQc2NjY2NjY2Njb2Y47fb0vilQKMTl0AAAAASUVORK5CYII=">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASYAAAEmCAAAAADqr2IGAAAEGElEQVR42u3ay24iMRAF0Pz/T89sRyKQe6t6ApjjVRR1Gtchkuvhrz9WsL4QYMKECRMmTBYmTJgwvTzTV7z+ff6bl948efv87c/33pa/M/lNGyMmTJgwYTqP6YejMd5EQpPz5YiPv8hhjJgwYcKE6TimNglIUoT8SN4kKDlTgYsJEyZMmD6SKdlQC3FVqZwnKJgwYcKECdPsY65NDjbtWkyYMGHChGnWAH0cTFKUJqAJXLLzp/XCMWHChAnTizFtDtd3+flp95swYcKECdNTmdrV8s2GoG0ztx3BRpFiwoQJE6YjmDZt2XZD+SGdN47349VVhwATJkyYML0J0yz4PLzN8HLfdJ7FiAkTJkyYzmBqG76bZCJPFNqB6KalezcKTJgwYcJ0EFNUCl76mzaM9gLQBekOJkyYMGE6iKkNKafZBDwjmA1oMWHChAnTqUybgzmnnG398Wdtyu8omcCECRMmTAcx5Vtp+WYo+VeySUowYcKECdMnMG3atS3HDL0das7SBUyYMGHC9AlMyce3V2SuCr5NJvIS9+6/BSZMmDBhOoLpqiZve+i29Pke2lh+dZyJCRMmTJhehmlTTOZvnhXJs8Z0XdJjwoQJE6YjmGZDzbZd+xg3eab92w0cJkyYMGE6laktIHOsvMzOC+b2ik9dumPChAkTpuOYkhFgEtJsfNi2aFu4PAXBhAkTJkznMeXFYcs0+9tNy/iyqzyYMGHChOk4ps2BnbxtMxbN99y2jIvSFxMmTJgwvSHTvknaHth5w3dW6M5ayd/sEBMmTJgwHcSUwO2fya/15Id6DpcU+ZgwYcKE6VSmPC1oy+NNybpp4yYcP3wZmDBhwoTpIKakndqWlFc1XmejynwndemLCRMmTJjeiikpKZOjNL+gk6cRs0s8efN3eHEHEyZMmDC9FVOeEORXfNqR5+zwzp9pkwxMmDBhwnQS0+ayywyxHYi2iUs7Io2avJgwYcKE6c2Z9m3f9uJOW0jPvtqkVMaECRMmTJ/DdFWTd/bm5J315ZuyxYwJEyZMmE5lasPID+xZctAOONumc3SdCBMmTJgwHcR0bSM1DykPsr12U4wtMWHChAnTBzBdNQ5sj/P2Mk0+8tw0rzFhwoQJ00lMeQN3FuRmbQaf+0tImDBhwoTpDKZ25SXovsmbpCxtI7jYPyZMmDBhOoKpPZ5nhfGsAJ6lI5cV1ZgwYcKE6SCmTSO1hWgP/rz0zd8ffcGYMGHChOk4pv9x9M6K2E2KsGkiY8KECRMmTDlNwr0ps69NPjBhwoQJE6a2hdoy5WG0Y9Sk9MWECRMmTJ/AlDd520M3KX1nbdz8S3rCOBMTJkyYML0M0+bizv6Yby/ZtByz8hgTJkyYMJ3BZEUJgYUJEyZMmDBhsjBhwvQq6y9FYQFghQWYTgAAAABJRU5ErkJggg==">
     
 </ul>
 
@@ -451,7 +451,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        <a class="post_tag-none-link" href="/tags/Hexo/" rel="tag">Hexo</a>
+        <a class="post_tag-none-link" href="/tags/CGImageProperties/" rel="tag">CGImageProperties</a></li><li class="mdl-menu__item"><a class="post_tag-none-link" href="/tags/Exif/" rel="tag">Exif</a></li><li class="mdl-menu__item"><a class="post_tag-none-link" href="/tags/PHImageManager/" rel="tag">PHImageManager</a></li><li class="mdl-menu__item"><a class="post_tag-none-link" href="/tags/iOS/" rel="tag">iOS</a>
     </ul>
     
 
@@ -479,7 +479,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Markdown语法&url=https://rensss.github.io/2018/05/12/Markdown%E8%AF%AD%E6%B3%95/index.html&pic=https://rensss.github.io/img/favicon.png&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=iOS 获取 Exif 信息相关&url=https://rensss.github.io/2021/10/12/iOS-%E8%8E%B7%E5%8F%96-Exif-%E4%BF%A1%E6%81%AF%E7%9B%B8%E5%85%B3/index.html&pic=https://rensss.github.io/img/favicon.png&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -488,7 +488,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Markdown语法&url=https://rensss.github.io/2018/05/12/Markdown%E8%AF%AD%E6%B3%95/index.html&via=Rzk" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=iOS 获取 Exif 信息相关&url=https://rensss.github.io/2021/10/12/iOS-%E8%8E%B7%E5%8F%96-Exif-%E4%BF%A1%E6%81%AF%E7%9B%B8%E5%85%B3/index.html&via=Rzk" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Twitter
             </li>
@@ -497,7 +497,7 @@
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://rensss.github.io/2018/05/12/Markdown%E8%AF%AD%E6%B3%95/index.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://rensss.github.io/2021/10/12/iOS-%E8%8E%B7%E5%8F%96-Exif-%E4%BF%A1%E6%81%AF%E7%9B%B8%E5%85%B3/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Facebook
             </li>
@@ -512,7 +512,7 @@
 
     <!-- Share QQ -->
     
-        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=R_z_k__&title=Markdown语法&summary=杂七杂八の杂货铺&pics=https://rensss.github.io/img/favicon.png&url=https://rensss.github.io/2018/05/12/Markdown%E8%AF%AD%E6%B3%95/index.html" target="_blank">
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=R_z_k__&title=iOS 获取 Exif 信息相关&summary=杂七杂八の杂货铺&pics=https://rensss.github.io/img/favicon.png&url=https://rensss.github.io/2021/10/12/iOS-%E8%8E%B7%E5%8F%96-Exif-%E4%BF%A1%E6%81%AF%E7%9B%B8%E5%85%B3/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 QQ
             </li>
@@ -531,82 +531,287 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <p>Markdown 常用语法</p>
+        <p>关于获取图片文件的 Exif 信息的 Demo</p>
 <span id="more"></span>
-<h1 id="Markdown-语法"><a href="#Markdown-语法" class="headerlink" title="Markdown 语法"></a>Markdown 语法</h1><h2 id="什么是-Markdown"><a href="#什么是-Markdown" class="headerlink" title="什么是 Markdown"></a>什么是 Markdown</h2><p>Markdown 是一种方便记忆、书写的纯文本标记语言，用户可以使用这些标记符号以最小的输入代价生成极富表现力的文档：譬如您正在阅读的这份文档。它使用简单的符号标记不同的标题，分割不同的段落，<strong>粗体</strong> 或者 <em>斜体</em> 某些文字，更棒的是，它还可以</p>
-<h2 id="1-制作一份待办事宜"><a href="#1-制作一份待办事宜" class="headerlink" title="1. 制作一份待办事宜"></a>1. 制作一份待办事宜</h2><ul>
-<li><input disabled="" type="checkbox"> 支持以 PDF 格式导出文稿</li>
-<li><input disabled="" type="checkbox"> 改进 Cmd 渲染算法，使用局部渲染技术提高渲染效率</li>
-<li><input checked="" disabled="" type="checkbox"> 新增 Todo 列表功能</li>
-<li><input checked="" disabled="" type="checkbox"> 修复 LaTex 公式渲染问题</li>
-<li><input checked="" disabled="" type="checkbox"> 新增 LaTex 公式编号功能</li>
-</ul>
-<h2 id="2-书写一个质能守恒公式-LaTeX"><a href="#2-书写一个质能守恒公式-LaTeX" class="headerlink" title="2. 书写一个质能守恒公式[^LaTeX]"></a>2. 书写一个质能守恒公式[^LaTeX]</h2><p>$$E=mc^2$$</p>
-<h2 id="3-高亮一段代码-code"><a href="#3-高亮一段代码-code" class="headerlink" title="3. 高亮一段代码[^code]"></a>3. 高亮一段代码[^code]</h2><pre><code class="python">@requires_authorization
-class SomeClass:
-    pass
 
-if __name__ == &#39;__main__&#39;:
-    # A comment
-    print &#39;hello world&#39;
-</code></pre>
-<h2 id="4-高效绘制"><a href="#4-高效绘制" class="headerlink" title="4. 高效绘制"></a>4. 高效绘制</h2><pre><code class="flow">st=&gt;start: Start
-op=&gt;operation: Your Operation
-cond=&gt;condition: Yes or No?
-e=&gt;end
-
-st-&gt;op-&gt;cond
-cond(yes)-&gt;e
-cond(no)-&gt;op
-</code></pre>
-<h2 id="5-高效绘制"><a href="#5-高效绘制" class="headerlink" title="5. 高效绘制"></a>5. 高效绘制</h2><pre><code class="seq">Alice-&gt;Bob: Hello Bob, how are you?
-Note right of Bob: Bob thinks
-Bob--&gt;Alice: I am good thanks!
-</code></pre>
-<h2 id="6-高效绘制"><a href="#6-高效绘制" class="headerlink" title="6. 高效绘制"></a>6. 高效绘制</h2><pre><code class="gantt">    title 项目开发流程
-    section 项目确定
-        需求分析       :a1, 2016-06-22, 3d
-        可行性报告     :after a1, 5d
-        概念验证       : 5d
-    section 项目实施
-        概要设计      :2016-07-05  , 5d
-        详细设计      :2016-07-08, 10d
-        编码          :2016-07-15, 10d
-        测试          :2016-07-22, 5d
-    section 发布验收
-        发布: 2d
-        验收: 3d
-</code></pre>
-<h2 id="7-绘制表格"><a href="#7-绘制表格" class="headerlink" title="7. 绘制表格"></a>7. 绘制表格</h2><table>
+<h1 id="ExifDemo"><a href="#ExifDemo" class="headerlink" title="ExifDemo"></a>ExifDemo</h1><p>iOS 获取 Exif 信息的 Demo</p>
+<h5 id="EXIF信息"><a href="#EXIF信息" class="headerlink" title="EXIF信息"></a>EXIF信息</h5><p>是可交换图像文件的缩写，是专门为数码相机的照片设定的，可以记录数码照片的属性信息和拍摄数据。EXIF可以附加于JPEG、TIFF、RIFF等文件之中，为其增加有关数码相机拍摄信息的内容和索引图或图像处理软件的版本信息。</p>
+<h5 id="EXIF-以下为可能包含的信息"><a href="#EXIF-以下为可能包含的信息" class="headerlink" title="EXIF 以下为可能包含的信息:"></a>EXIF 以下为可能包含的信息:</h5><table>
 <thead>
 <tr>
-<th>项目</th>
-<th align="right">价格</th>
-<th align="center">数量</th>
+<th><strong>项目</strong></th>
+<th><strong>资讯（举例）</strong></th>
 </tr>
 </thead>
 <tbody><tr>
-<td>计算机</td>
-<td align="right">$1600</td>
-<td align="center">5</td>
+<td>制造厂商</td>
+<td>Canon</td>
 </tr>
 <tr>
-<td>手机</td>
-<td align="right">$12</td>
-<td align="center">12</td>
+<td>相机型号</td>
+<td>Canon EOS-1Ds Mark III</td>
 </tr>
 <tr>
-<td>管线</td>
-<td align="right">$1</td>
-<td align="center">234</td>
+<td>影像方向</td>
+<td>正常（upper-left）</td>
+</tr>
+<tr>
+<td>影像解析度 X</td>
+<td>300</td>
+</tr>
+<tr>
+<td>影像解析度 Y</td>
+<td>300</td>
+</tr>
+<tr>
+<td>解析度单位</td>
+<td>dpi</td>
+</tr>
+<tr>
+<td>软件</td>
+<td>Adobe Photoshop CS Macintosh</td>
+</tr>
+<tr>
+<td>最后异动时间</td>
+<td>2005:10:06 12:53:19</td>
+</tr>
+<tr>
+<td>YCbCrPositioning</td>
+<td>2</td>
+</tr>
+<tr>
+<td>曝光时间</td>
+<td>0.00800 (1/125) sec</td>
+</tr>
+<tr>
+<td>光圈值</td>
+<td>F22</td>
+</tr>
+<tr>
+<td>拍摄模式</td>
+<td>光圈优先</td>
+</tr>
+<tr>
+<td>ISO感光值</td>
+<td>100</td>
+</tr>
+<tr>
+<td>Exif资讯版本</td>
+<td>30,32,32,31</td>
+</tr>
+<tr>
+<td>影像拍摄时间</td>
+<td>2005:09:25 15:00:18</td>
+</tr>
+<tr>
+<td>影像存入时间</td>
+<td>2005:09:25 15:00:18</td>
+</tr>
+<tr>
+<td>曝光补偿（EV+-）</td>
+<td>0</td>
+</tr>
+<tr>
+<td>测光模式</td>
+<td>点测光（Spot）</td>
+</tr>
+<tr>
+<td>闪光灯</td>
+<td>关闭</td>
+</tr>
+<tr>
+<td>镜头实体焦长</td>
+<td>12 mm</td>
+</tr>
+<tr>
+<td>Flashpix版本</td>
+<td>30,31,30,30</td>
+</tr>
+<tr>
+<td>影像色域空间</td>
+<td>sRGB</td>
+</tr>
+<tr>
+<td>影像尺寸X</td>
+<td>5616 pixel</td>
+</tr>
+<tr>
+<td>影像尺寸Y</td>
+<td>3744 pixel</td>
 </tr>
 </tbody></table>
-<h2 id="8-更详细语法说明"><a href="#8-更详细语法说明" class="headerlink" title="8. 更详细语法说明"></a>8. 更详细语法说明</h2><p>总而言之，不同于其它 <em>所见即所得</em> 的编辑器：你只需使用键盘专注于书写文本内容，就可以生成印刷级的排版格式，省却在键盘和工具栏之间来回切换，调整内容和格式的麻烦。<strong>Markdown 在流畅的书写和印刷级的阅读体验之间找到了平衡。</strong> 目前它已经成为世界上最大的技术分享网站 GitHub 和 技术问答网站 StackOverFlow 的御用书写格式。</p>
-<hr>
-<p>[^LaTeX]: 支持 <strong>LaTeX</strong> 编辑显示支持，例如：$\sum_{i=1}^n a_i=0$， 访问 [MathJax][4] 参考更多使用方法。</p>
-<p>[^code]: 代码高亮功能支持包括 Java, Python, JavaScript 在内的，<strong>四十一</strong>种主流编程语言。</p>
+<p>在 iOS 当中, 使用 UIImagePickerController 选择单张图片的方法获取的 image 并非是原始图片, 所以不包含原始的 Exif 信息</p>
+<h5 id="UIImagePickerController-解析到的-Exif-信息如下"><a href="#UIImagePickerController-解析到的-Exif-信息如下" class="headerlink" title="UIImagePickerController 解析到的 Exif 信息如下:"></a>UIImagePickerController 解析到的 Exif 信息如下:</h5><pre><code>[&#123;TIFF&#125;: &#123;
+    Orientation = 6;
+    ResolutionUnit = 2;
+    XResolution = 72;
+    YResolution = 72;
+&#125;, &#123;Exif&#125;: &#123;
+    ColorSpace = 1;
+    ComponentsConfiguration =     (
+        1,
+        2,
+        3,
+        0
+    );
+    ExifVersion =     (
+        2,
+        2,
+        1
+    );
+    FlashPixVersion =     (
+        1,
+        0
+    );
+    PixelXDimension = 4032;
+    PixelYDimension = 3024;
+    SceneCaptureType = 0;
+&#125;, PixelWidth: 4032, PixelHeight: 3024, &#123;JFIF&#125;: &#123;
+    DensityUnit = 1;
+    JFIFVersion =     (
+        1,
+        0,
+        2
+    );
+    XDensity = 72;
+    YDensity = 72;
+&#125;, ProfileName: Display P3, DPIWidth: 72, DPIHeight: 72, ColorModel: RGB, Orientation: 6, Depth: 8]
+</code></pre>
+<p>经过调研发现, 使用 PHImageManager 的 requestImageDataAndOrientation 方法获取到的 imagedata 包含原始的信息</p>
+<h5 id="PHImageManager-获取-asset-拿到原始-data-后经过解析可以得到如下信息"><a href="#PHImageManager-获取-asset-拿到原始-data-后经过解析可以得到如下信息" class="headerlink" title="PHImageManager 获取 asset 拿到原始 data 后经过解析可以得到如下信息:"></a>PHImageManager 获取 asset 拿到原始 data 后经过解析可以得到如下信息:</h5><pre><code>[&#123;TIFF&#125;: &#123;
+    DateTime = &quot;2021:10:11 11:09:47&quot;;
+    HostComputer = &quot;iPhone XS Max&quot;;
+    Make = Apple;
+    Model = &quot;iPhone XS Max&quot;;
+    Orientation = 6;
+    ResolutionUnit = 2;
+    Software = &quot;15.0.1&quot;;
+    TileLength = 512;
+    TileWidth = 512;
+    XResolution = 72;
+    YResolution = 72;
+&#125;, Orientation: 6, PixelWidth: 4032, PixelHeight: 3024, &#123;Exif&#125;: &#123;
+    ApertureValue = &quot;1.69599381283836&quot;;
+    BrightnessValue = &quot;6.159757029988956&quot;;
+    ColorSpace = 65535;
+    CompositeImage = 2;
+    DateTimeDigitized = &quot;2021:10:11 11:09:47&quot;;
+    DateTimeOriginal = &quot;2021:10:11 11:09:47&quot;;
+    ExifVersion =     (
+        2,
+        3,
+        2
+    );
+    ExposureBiasValue = 0;
+    ExposureMode = 0;
+    ExposureProgram = 2;
+    ExposureTime = &quot;0.00909090909090909&quot;;
+    FNumber = &quot;1.8&quot;;
+    Flash = 16;
+    FocalLenIn35mmFilm = 26;
+    FocalLength = &quot;4.25&quot;;
+    ISOSpeedRatings =     (
+        25
+    );
+    LensMake = Apple;
+    LensModel = &quot;iPhone XS Max back dual camera 4.25mm f/1.8&quot;;
+    LensSpecification =     (
+        &quot;4.25&quot;,
+        6,
+        &quot;1.8&quot;,
+        &quot;2.4&quot;
+    );
+    MeteringMode = 5;
+    OffsetTime = &quot;+08:00&quot;;
+    OffsetTimeDigitized = &quot;+08:00&quot;;
+    OffsetTimeOriginal = &quot;+08:00&quot;;
+    PixelXDimension = 4032;
+    PixelYDimension = 3024;
+    SceneType = 1;
+    SensingMethod = 2;
+    ShutterSpeedValue = &quot;6.786114009295267&quot;;
+    SubjectArea =     (
+        2013,
+        1511,
+        2217,
+        1330
+    );
+    SubsecTimeDigitized = 440;
+    SubsecTimeOriginal = 440;
+    WhiteBalance = 0;
+&#125;, &#123;GPS&#125;: &#123;
+    Altitude = &quot;5111.43158627087198&quot;;
+    AltitudeRef = 0;
+    DestBearing = &quot;3111.85987089833244&quot;;
+    DestBearingRef = T;
+    HPositioningError = 35;
+    ImgDirection = &quot;3111.85987089833244&quot;;
+    ImgDirectionRef = T;
+    Latitude = &quot;4111.02616383333334&quot;;
+    LatitudeRef = N;
+    Longitude = &quot;111111.41185&quot;;
+    LongitudeRef = E;
+    Speed = 0;
+    SpeedRef = K;
+&#125;, PrimaryImage: 1, ProfileName: Display P3, DPIWidth: 72, DPIHeight: 72, ColorModel: RGB, &#123;MakerApple&#125;: &#123;
+    1 = 14;
+    12 =     (
+        &quot;0.7695312&quot;,
+        &quot;1.242188&quot;
+    );
+    13 = 5;
+    14 = 0;
+    16 = 1;
+    17 = &quot;07250F0C-D055-4E2C-9290-7A002339A7F4&quot;;
+    2 = &#123;length = 512, bytes = 0x63006a00 6b006e00 74007f00 9300a800 ... fb007500 4e005100 &#125;;
+    20 = 10;
+    23 = 13639680;
+    25 = 2;
+    26 = q900n;
+    3 =     &#123;
+        epoch = 0;
+        flags = 1;
+        timescale = 1000000000;
+        value = 190422196502791;
+    &#125;;
+    31 = 0;
+    32 = &quot;50778780-F3AB-48F9-8C74-D070CC6A633F&quot;;
+    33 = 0;
+    35 =     (
+        15,
+        268435608
+    );
+    37 = 394;
+    38 = 3;
+    39 = &quot;47.02333&quot;;
+    4 = 1;
+    40 = 1;
+    43 = &quot;06DFDAB5-59F3-47D4-AC2F-04FAFA9118F2&quot;;
+    45 = 4898;
+    46 = 1;
+    47 = 162;
+    5 = 184;
+    54 = 5167;
+    55 = 4;
+    59 = 0;
+    6 = 191;
+    60 = 4;
+    65 = 0;
+    7 = 1;
+    74 = 2;
+    8 =     (
+        &quot;0.0132227&quot;,
+        &quot;-0.3723191&quot;,
+        &quot;-0.9368563&quot;
+    );
+&#125;, Depth: 8]
+</code></pre>
+<p>具体到每个字段对应的信息还需要继续查找和调研</p>
+<p>详细内容见 Demo</p>
 <blockquote>
-<p>ps:<br>参考链接  <a target="_blank" rel="noopener" href="https://www.zybuluo.com/mdeditor#439859">作业部落</a></p>
+<p><a target="_blank" rel="noopener" href="https://developer.apple.com/documentation/imageio/cgimageproperties">Apple</a> 对于 CGImageProperties 信息的文档</p>
+<p><a target="_blank" rel="noopener" href="https://developer.apple.com/documentation/imageio/cgimageproperties/exif_dictionary_keys">Apple</a> 对于 Exif 信息的文档</p>
+<p><a target="_blank" rel="noopener" href="https://photoinvestigator.co/blog/the-mystery-of-maker-apple-metadata/">Maker Apple</a> 字段的相关信息的猜测</p>
 </blockquote>
 
         
@@ -662,8 +867,8 @@ Bob--&gt;Alice: I am good thanks!
 
 <script type="text/javascript">
     var disqus_config = function () {
-        this.page.url = 'https://rensss.github.io/2018/05/12/Markdown%E8%AF%AD%E6%B3%95/';  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = 'https://rensss.github.io/2018/05/12/Markdown%E8%AF%AD%E6%B3%95/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = 'https://rensss.github.io/2021/10/12/iOS-%E8%8E%B7%E5%8F%96-Exif-%E4%BF%A1%E6%81%AF%E7%9B%B8%E5%85%B3/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'https://rensss.github.io/2021/10/12/iOS-%E8%8E%B7%E5%8F%96-Exif-%E4%BF%A1%E6%81%AF%E7%9B%B8%E5%85%B3/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
 </script>
 
@@ -712,21 +917,13 @@ Bob--&gt;Alice: I am good thanks!
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2019/08/02/%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93%E7%AF%87/" id="post_nav-newer" class="prev-content">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_back</i>
-            </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            新篇
-        </a>
-    
 
     <!-- Section Spacer -->
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
     
-        <a href="/2018/05/12/%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87%E5%8A%A0%E8%BD%BD%E5%8D%A1%E9%A1%BF/" id="post_nav-older" class="next-content">
+        <a href="/2021/06/28/%E7%9B%B8%E4%BC%BC%E5%9B%BE%E7%89%87%E6%8A%80%E6%9C%AF%E8%B0%83%E7%A0%94/" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
