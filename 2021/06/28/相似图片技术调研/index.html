@@ -63,7 +63,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="最近研究相似图片的方案调研">
-    <meta name="keywords" content="">
+    <meta name="keywords" content=",相似图片,哈希化">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -244,11 +244,11 @@
     <meta property="og:title" content="相似图片技术调研 | R_z_k__">
     <meta property="og:image" content="/img/favicon.png">
     <meta property="og:description" content="最近研究相似图片的方案调研">
-    
+    <meta property="og:article:tag" content="相似图片"> <meta property="og:article:tag" content="哈希化"> 
 
     
         <meta property="article:published_time" content="Mon Jun 28 2021 15:08:27 GMT+0800">
-        <meta property="article:modified_time" content="Mon Jun 28 2021 15:12:09 GMT+0800">
+        <meta property="article:modified_time" content="Tue Oct 12 2021 17:11:03 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -271,7 +271,7 @@
     "mainEntityOfPage": "https://rensss.github.io/2021/06/28/%E7%9B%B8%E4%BC%BC%E5%9B%BE%E7%89%87%E6%8A%80%E6%9C%AF%E8%B0%83%E7%A0%94/index.html",
     "headline": "相似图片技术调研",
     "datePublished": "Mon Jun 28 2021 15:08:27 GMT+0800",
-    "dateModified": "Mon Jun 28 2021 15:12:09 GMT+0800",
+    "dateModified": "Tue Oct 12 2021 17:11:03 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "Rzk",
@@ -289,7 +289,7 @@
             "url": "/img/favicon.png"
         }
     },
-    "keywords": "",
+    "keywords": ",相似图片,哈希化",
     "description": "最近研究相似图片的方案调研",
 }
 </script>
@@ -357,6 +357,15 @@
 
     <!-- Left aligned menu below button -->
     
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE"><span class="post-toc-number">1.</span> <span class="post-toc-text">思维导图</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E5%A4%A7%E7%BA%B2"><span class="post-toc-number">2.</span> <span class="post-toc-text">大纲</span></a></li></ol>
+    </ul>
     
 
 
@@ -435,6 +444,15 @@
     
 
     <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-none-link" href="/tags/%E5%93%88%E5%B8%8C%E5%8C%96/" rel="tag">哈希化</a></li><li class="mdl-menu__item"><a class="post_tag-none-link" href="/tags/%E7%9B%B8%E4%BC%BC%E5%9B%BE%E7%89%87/" rel="tag">相似图片</a>
+    </ul>
     
 
     <!-- Share -->
@@ -516,9 +534,8 @@
         <p>最近研究相似图片的方案调研</p>
 <span id="more"></span>
 
-<p><img src="https://i.loli.net/2021/06/28/NwQljgyZUIKVD96.png" alt="相似图片-技术路线图.png"></p>
-<p>大纲</p>
-<p><img src="https://i.loli.net/2021/06/28/VfonLwdjr3FkRD7.png" alt="相似图片-技术路线图-大纲.png"></p>
+<h4 id="思维导图"><a href="#思维导图" class="headerlink" title="思维导图"></a>思维导图</h4><p><img src="https://i.loli.net/2021/06/28/NwQljgyZUIKVD96.png" alt="相似图片-技术路线图.png"></p>
+<h4 id="大纲"><a href="#大纲" class="headerlink" title="大纲"></a>大纲</h4><p><img src="https://i.loli.net/2021/06/28/VfonLwdjr3FkRD7.png" alt="相似图片-技术路线图-大纲.png"></p>
 
         
     
@@ -747,7 +764,7 @@
             </a>
             <ul class="dropdown-menu">
                 <li>
-                <a class="sidebar_archives-link" href="/categories/Hexo/">Hexo<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/PM2/">PM2<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/%E5%BC%80%E5%8F%91/">开发<span class="sidebar_archives-count">10</span></a></li><li><a class="sidebar_archives-link" href="/categories/%E6%9D%82%E7%B1%BB/">杂类<span class="sidebar_archives-count">1</span></a>
+                <a class="sidebar_archives-link" href="/categories/Hexo/">Hexo<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/PM2/">PM2<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/%E5%BC%80%E5%8F%91/">开发<span class="sidebar_archives-count">11</span></a></li><li><a class="sidebar_archives-link" href="/categories/%E6%9D%82%E7%B1%BB/">杂类<span class="sidebar_archives-count">1</span></a>
             </ul>
         </li>
         
