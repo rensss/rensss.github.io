@@ -52,7 +52,7 @@
     
     <title>
         
-            归档: 2017/8 | 
+            iOS Vision 框架初探 | 
         
         R_z_k__
     </title>
@@ -62,8 +62,8 @@
     <link rel="icon" href="/img/favicon.png">
 
     <meta name="format-detection" content="telephone=no"/>
-    <meta name="description" itemprop="description" content="杂七杂八の杂货铺">
-    <meta name="keywords" content="">
+    <meta name="description" itemprop="description" content="iOS Vision 框架">
+    <meta name="keywords" content=",Vision,iOS">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -224,7 +224,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="R_z_k__">
-    <meta name="msapplication-starturl" content="https://rensss.github.io/archives/2017/08/">
+    <meta name="msapplication-starturl" content="https://rensss.github.io/2021/10/18/iOS-Vision-%E6%A1%86%E6%9E%B6%E5%88%9D%E6%8E%A2/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="R_z_k__">
@@ -239,13 +239,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="https://rensss.github.io/archives/2017/08/">
+    <meta property="og:url" content="https://rensss.github.io/2021/10/18/iOS-Vision-%E6%A1%86%E6%9E%B6%E5%88%9D%E6%8E%A2/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="归档: 2017/8 | R_z_k__">
+    <meta property="og:title" content="iOS Vision 框架初探 | R_z_k__">
     <meta property="og:image" content="/img/favicon.png">
-    <meta property="og:description" content="杂七杂八の杂货铺">
-    
+    <meta property="og:description" content="iOS Vision 框架">
+    <meta property="og:article:tag" content="Vision"> <meta property="og:article:tag" content="iOS"> 
 
+    
+        <meta property="article:published_time" content="Mon Oct 18 2021 18:09:26 GMT+0800">
+        <meta property="article:modified_time" content="Mon Oct 18 2021 18:09:26 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -253,13 +256,43 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="https://rensss.github.io/archives/2017/08/index.html" />
+        <link rel="canonical" href="https://rensss.github.io/2021/10/18/iOS-Vision-%E6%A1%86%E6%9E%B6%E5%88%9D%E6%8E%A2/index.html" />
     
 
     <!-- Structured-data for SEO -->
     
         
 
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "https://rensss.github.io/2021/10/18/iOS-Vision-%E6%A1%86%E6%9E%B6%E5%88%9D%E6%8E%A2/index.html",
+    "headline": "iOS Vision 框架初探",
+    "datePublished": "Mon Oct 18 2021 18:09:26 GMT+0800",
+    "dateModified": "Mon Oct 18 2021 18:09:26 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "Rzk",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/avatar.png"
+        },
+        "description": "Hi, 欢迎来到我の杂货铺!"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "R_z_k__",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": ",Vision,iOS",
+    "description": "iOS Vision 框架",
+}
+</script>
 
 
     
@@ -302,161 +335,356 @@
                         </button>
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
+                    <!-- Post TOC -->
 
-    <!-- Pin on top -->
     
-        
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#iOSVisionDemo"><span class="post-toc-number">1.</span> <span class="post-toc-text">iOSVisionDemo</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Live-Text"><span class="post-toc-number">1.0.0.0.1.</span> <span class="post-toc-text">Live Text</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Vision"><span class="post-toc-number">1.0.0.0.2.</span> <span class="post-toc-text">Vision</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Demo-%E7%9B%B8%E5%85%B3%E6%95%88%E6%9E%9C"><span class="post-toc-number">1.0.0.0.3.</span> <span class="post-toc-text">Demo 相关效果</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Vision-%E8%AF%86%E5%88%AB%E6%95%88%E6%9E%9C"><span class="post-toc-number">1.0.0.0.4.</span> <span class="post-toc-text">Vision 识别效果</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#%E7%9B%B8%E5%85%B3%E7%89%B9%E7%82%B9"><span class="post-toc-number">1.0.0.0.5.</span> <span class="post-toc-text">相关特点:</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#%E7%BB%93%E8%AE%BA"><span class="post-toc-number">1.0.0.0.6.</span> <span class="post-toc-text">结论</span></a></li></ol></li></ol></li></ol></li></ol></li></ol>
+    </ul>
     
 
-    <!-- Normal Post -->
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
     
         
             <!-- Random Thumbnail -->
             <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/08/09/%E4%BD%BF%E7%94%A8PM2%E8%AE%A9hexo%E5%A7%8B%E7%BB%88%E8%BF%90%E8%A1%8C/">使用PM2让hexo始终运行</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            背景在Mac下,编辑hexo以后每次都要 hexo g hexo s , 还要一直开着终端,特别烦人!
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/08/09/%E4%BD%BF%E7%94%A8PM2%E8%AE%A9hexo%E5%A7%8B%E7%BB%88%E8%BF%90%E8%A1%8C/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="Rzk's avatar">
-            </div>
-            <div>
-                <strong>Rzk</strong>
-                <span>8月 09, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/PM2/">PM2</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/08/09/%E6%B7%BB%E5%8A%A0%E7%AE%80%E4%B9%A6%E5%9B%BE%E7%89%87%E6%B5%8B%E8%AF%95/">添加简书图片测试</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            添加图片试试简书的图片链接
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/08/09/%E6%B7%BB%E5%8A%A0%E7%AE%80%E4%B9%A6%E5%9B%BE%E7%89%87%E6%B5%8B%E8%AF%95/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="Rzk's avatar">
-            </div>
-            <div>
-                <strong>Rzk</strong>
-                <span>8月 09, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/%E6%9D%82%E7%B1%BB/">杂类</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-
-    
-
-    
-        <script type="text/ls-javascript" id="thumbnail-script">
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 19 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
     $('.post_thumbnail-random').addClass('lazy');
-
-        locatePost = locatePost.next();
-    }
 </script>
 
+        
+    
+            <p class="article-headline-p">
+                iOS Vision 框架初探
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>Rzk</strong>
+        <span>10月 18, 2021</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">devices other</i>
+    <span class="visuallyhidden">devices other</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+    <li class="mdl-menu__item">在其它设备中阅读本文章</li>
+    
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQ4AAAEOCAAAAABd2qZ5AAADgElEQVR42u3aQXLjMAwEQP//07vXVKXszABkokPr5EokWWwdYIDz+uf4crwQ4MCBAwcOHDhw4MDxYI5XfHw//4ev+XbOu2uT73135mYtOHDgwIHjHke+sM0jzgjy1zB8SThw4MCB4xrH5+KaYyX3OVXIZ/fHgQMHDhzP4Ug+b5q6vCS3LwYHDhw4cDyToy117cKSwvnQ3x04cODAgeNQgczLZ0swG1P+6qwUBw4cOHAcCjQ8+fMf5Dtw4MCBA8fiaIMF+WivbRfz4vrDinDgwIEDx1GOfAA3a7T2G1ftQDC/FgcOHDhw3OOYNW9nt4IS4k17+ZYbBw4cOHBc5tgHC9oGLA/M5SU5bztx4MCBA8dZjrbhaeMC7YBvX7zr8SIOHDhw4DjKcSAQsBj25Q1bMexrfwTgwIEDB44LHPul5v9tr2rbvLxRxIEDBw4cf8XRBho2Q722Gdu0fzhw4MCB4wZHPmJry3BOPLvPrIGMtp1w4MCBA8eCoy1X7dZOzrqP4rVPggMHDhw47nG0AYXDYbU4PJGTFaUaBw4cOHBc5sgDDfnfN1tEm/tErwoHDhw4cBzlyG86CyXkW1PtBlLbIg5npThw4MCBo+SYhc9miPsgQtKwtdtROHDgwIHjLEcSbmiHiXk7N4viHW4aceDAgQPHNY7ZsO9ApKBcTBuSKLadcODAgQPHIY528NcWwjxe8LnxaxvLKCSBAwcOHDiucewXPyPIS3se0ct/FuDAgQMHjhsceelty2H9cIuQ3PAcHDhw4MBxlGMTL8jjC5uNq9ko8zMQDhw4cOC4xzG79WzM125ita1j3vLhwIEDB457HJuytwm65dtd9xo8HDhw4MBxgyNvvdqwQvvoSRluh5gH8h04cODAgWPRs+QN26mR4v6em0EhDhw4cOC4wdGW2035zJu02XZUuwGGAwcOHDjucczaqvyq5C9t6zhrGotAAw4cOHDgWHDkx6xVy0tvXp43Q0wcOHDgwHGPY1+o9sGF4tFHr6HedsKBAwcOHGuOdmF5U7cZLM5KaT5MxIEDBw4ctzna4posJimcG5pZMAIHDhw4cDyHY9PmtUW9fc7hGBEHDhw4cDyGY7MRlX9X25i1gQkcOHDgwHGPoy1+OceNYMSM8vCsFAcOHDhwHA005IGDU4uftXM4cODAgeM3ORw4cODAgQMHDhw4cOB42PEfVy7x86B2bkQAAAAASUVORK5CYII=">
+    
+</ul>
+
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-none-link" href="/tags/Vision/" rel="tag">Vision</a></li><li class="mdl-menu__item"><a class="post_tag-none-link" href="/tags/iOS/" rel="tag">iOS</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+        
+            <!-- Busuanzi Views -->
+            <a class="post_share-link" href="#">
+                <li class="mdl-menu__item">
+                    <span id="busuanzi_container_page_pv">
+                        <span id="busuanzi_value_page_pv"></span>&nbsp;浏览量
+                    </span>
+                </li>
+            </a>
+        
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=iOS Vision 框架初探&url=https://rensss.github.io/2021/10/18/iOS-Vision-%E6%A1%86%E6%9E%B6%E5%88%9D%E6%8E%A2/index.html&pic=https://rensss.github.io/img/favicon.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=iOS Vision 框架初探&url=https://rensss.github.io/2021/10/18/iOS-Vision-%E6%A1%86%E6%9E%B6%E5%88%9D%E6%8E%A2/index.html&via=Rzk" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://rensss.github.io/2021/10/18/iOS-Vision-%E6%A1%86%E6%9E%B6%E5%88%9D%E6%8E%A2/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=R_z_k__&title=iOS Vision 框架初探&summary=杂七杂八の杂货铺&pics=https://rensss.github.io/img/favicon.png&url=https://rensss.github.io/2021/10/18/iOS-Vision-%E6%A1%86%E6%9E%B6%E5%88%9D%E6%8E%A2/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 QQ
+            </li>
+        </a>
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
     
 </div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <p>iOS Vision 框架</p>
+<span id="more"></span>
+
+<h1 id="iOSVisionDemo"><a href="#iOSVisionDemo" class="headerlink" title="iOSVisionDemo"></a>iOSVisionDemo</h1><p>iOS Vision 框架</p>
+<h5 id="Live-Text"><a href="#Live-Text" class="headerlink" title="Live Text"></a><strong>Live Text</strong></h5><p>iOS15 当中的 Live Text 功能目前只在 相册, 相机 APP 当中提供, 并没有发现开发可以使用的 API。</p>
+<h5 id="Vision"><a href="#Vision" class="headerlink" title="Vision"></a><strong>Vision</strong></h5><p>2017年 iOS11 开始支持的识别框架。</p>
+<p>应用计算机视觉算法对输入图像和视频执行各种任务。</p>
+<p>视觉框架执行人脸和人脸地标检测、文本检测、条形码识别、图像注册和一般特征跟踪。Vision还允许将自定义核心ML模型用于分类或对象检测等任务。</p>
+<h5 id="Demo-相关效果"><a href="#Demo-相关效果" class="headerlink" title="Demo 相关效果"></a><strong>Demo 相关效果</strong></h5><p>原始图片</p>
+<img src="https://i.loli.net/2021/10/15/BDYET3js2cWf81J.png" alt="image.png" style="zoom: 50%;" />
+
+<h5 id="Vision-识别效果"><a href="#Vision-识别效果" class="headerlink" title="Vision 识别效果"></a><strong>Vision 识别效果</strong></h5><p>一.  识别到 character 级别<br><img src="https://i.loli.net/2021/10/15/wNzpqlgJUZsrE5B.png" alt="image.png" style="zoom: 20%;" /></p>
+<p>二. 识别到 words 级别<br><img src="https://i.loli.net/2021/10/15/4QGcYwLUEPeWnkb.png" alt="image.png" style="zoom:20%;" /></p>
+<p>三. iOS13 之后 Vision 支持 VNRecognizeTextRequest 文字识别<br><img src="https://i.loli.net/2021/10/15/Ne1zCWEoAu4ctlS.png" alt="image.png" style="zoom:20%;" /></p>
+<p>识别结果</p>
+<p>“Dropbox”</p>
+<p>“最近使用”</p>
+<p>“隔空投送”</p>
+<p>“’ 应用程序”</p>
+<p>“日桌面”</p>
+<p>5</p>
+<p>“—- 识别时长：593.3990478515625 毫秒”</p>
+<h5 id="相关特点"><a href="#相关特点" class="headerlink" title="相关特点:"></a><strong>相关特点:</strong></h5><ol>
+<li> API 1 仅能识别是否有文字. 不能识别出文字到底是什么内容</li>
+<li> 对中文识别结果不友好</li>
+<li> 首次识别 200~600 ms 之间, 取决于图片本身的大小</li>
+<li> 第二次识别时间很短, 猜测是系统做了相关缓存</li>
+<li> 支持的语言</li>
+</ol>
+<p>supportLanguage : [&quot;en-US&quot;, &quot;fr-FR&quot;, &quot;it-IT&quot;, &quot;de-DE&quot;, &quot;es-ES&quot;, &quot;pt-BR&quot;, &quot;zh-Hans&quot;, &quot;zh-Hant&quot;]</p>
+<h5 id="结论"><a href="#结论" class="headerlink" title="结论"></a><strong>结论</strong></h5><p>Vision 可以做图片上是否包含文字的判断功能, 和有限的文字内容识别功能</p>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 DISQUS_CLICK -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+
+<!-- add animation -->
+<style>
+	.disqus_click_btn {
+            line-height: 30px;
+            margin: 0;
+            min-width: 50px;
+            padding: 0 14px;
+            display: inline-block;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0;
+            overflow: hidden;
+            will-change: box-shadow;
+            transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1);
+            outline: 0;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            vertical-align: middle;
+            border: 0;
+            background: rgba(158, 158, 158, .2);
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+            color: #fff;
+            background-color: #757575;
+            text-shadow: 0;
+            display: none
+        }
+</style>
+	
+<div class="btn_click_load"> 
+    <button class="disqus_click_btn">阅读评论（请确保 disqus 可以正常加载）</button>
+</div>
+
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'https://rensss.github.io/2021/10/18/iOS-Vision-%E6%A1%86%E6%9E%B6%E5%88%9D%E6%8E%A2/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'https://rensss.github.io/2021/10/18/iOS-Vision-%E6%A1%86%E6%9E%B6%E5%88%9D%E6%8E%A2/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+
+<script type="text/ls-javascript" id="disqus-lazy-load-script">
+    $.ajax({
+        url: 'https://disqus.com/next/config.json',
+        timeout: 4000,
+        type: 'GET',
+        success: (function() {
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//https-rensss-github-io.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+            $('.disqus_click_btn').css('display','none');
+        })(),
+        error: function() {
+          $('.disqus_click_btn').css('display','block');
+        }
+    });
+    $('.btn_click_load').click(function() {  //click to load comments
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//https-rensss-github-io.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        $('.disqus_click_btn').css('display','none');
+    });
+</script>
+  	
+
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2021/10/12/iOS-%E8%8E%B7%E5%8F%96-Exif-%E4%BF%A1%E6%81%AF%E7%9B%B8%E5%85%B3/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
 
 
                     
