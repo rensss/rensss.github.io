@@ -248,7 +248,7 @@
 
     
         <meta property="article:published_time" content="Mon Oct 23 2017 15:17:01 GMT+0800">
-        <meta property="article:modified_time" content="Tue May 12 2020 17:10:57 GMT+0800">
+        <meta property="article:modified_time" content="Thu Feb 16 2023 12:23:10 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -271,7 +271,7 @@
     "mainEntityOfPage": "https://rensss.github.io/2017/10/23/%E6%8E%92%E5%BA%8F/index.html",
     "headline": "排序",
     "datePublished": "Mon Oct 23 2017 15:17:01 GMT+0800",
-    "dateModified": "Tue May 12 2020 17:10:57 GMT+0800",
+    "dateModified": "Thu Feb 16 2023 12:23:10 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "Rzk",
@@ -650,6 +650,27 @@
     &#125;
     
     return currentArray.copy;
+&#125;
+
+// OpenAI 的答案 。。。。。。
+func shellSort&lt;T: Comparable&gt;(_ array: [T]) -&gt; [T] &#123;
+    var a = array
+    let n = a.count
+    var gap = n / 2
+
+    while gap &gt; 0 &#123;
+        for i in gap..&lt;n &#123;
+            let temp = a[i]
+            var j = i
+            while j &gt;= gap &amp;&amp; a[j - gap] &gt; temp &#123;
+                a[j] = a[j - gap]
+                j -= gap
+            &#125;
+            a[j] = temp
+        &#125;
+        gap /= 2
+    &#125;
+    return a
 &#125;
 </code></pre>
 <h3 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h3><p>示意图<br><img src="https://raw.githubusercontent.com/rensss/Sort/master/source/quickSort.gif" alt="quickSort"></p>
